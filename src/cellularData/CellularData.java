@@ -6,8 +6,6 @@ public class CellularData {
 	int numColumns;
 	int startingYear;
 	
-	int rows = numRows;
-	int col = numColumns;
 	Object[][] anArray;
 	
 	
@@ -19,18 +17,19 @@ public class CellularData {
 	}
 	
 	public CellularData(int numRows, int numColumns, int startingYear)	{  //REMEMBER PARAMETERS NEED TYPE...CONSTRUCTOR
-//		this.numRows = 3;
+		this.numRows = numRows;
 //		this.numColumns = 7;
 //		this.startingYear = startingYear;
 		anArray = new Object[numRows][numColumns];  //this is an array of Object class
 	}
 	
-	public void addCountry(String country, double[] a)	{
-		anArray[0][0] = country;
-		for (int i = 1; i <= a.length - 1; i++)	{
-				anArray[0][i] = a[i];
-		}
-	}  
+/*	public void addCountry(String country, double[] a)	{
+		
+			anArray[0][0] = country;
+			for (int i = 1; i <= a.length - 1; i++)	{
+					anArray[0][i] = a[i];
+			}  
+	}  */
 //		
 	
 	

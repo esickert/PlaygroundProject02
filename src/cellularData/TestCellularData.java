@@ -28,13 +28,13 @@ public class TestCellularData
 		// TODO: Create a CellularData object with the given number of rows, 
 		// 		 columns, and starting year.
 		datatable = new CellularData(numRows, numColumns, startingYear);
-		System.out.println(datatable);
-
+		
 		// TODO: Add a country and its associated data to the table.
 		datatable.addCountry("Canada", canadaPartial);
-		datatable.addCountry("Mexico", mexicoPartial);
-		datatable.addCountry("United States", usaPartial);
+//		datatable.addCountry("Mexico", mexicoPartial);
+//		datatable.addCountry("United States", usaPartial);
 		System.out.println(datatable);
+		
 		// TODO: Return a string representation of the data table. This string will
 		//       contain newlines and be terminated with one.
 //		// the output is:
