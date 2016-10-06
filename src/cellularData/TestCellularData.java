@@ -12,7 +12,7 @@ public class TestCellularData
 	public static void main(String[] args) 
 	{
 		// Part 1: Testing with partial data for a country --------------------
-		System.out.println("Testing with Partial Data:");
+		System.out.println("Testing with Partial Data:\n");
 		final double[] canadaPartial = {0,0,0.046433382,0.229211886,0.370663166,0.752880479,1.264765577};
 		final double[] mexicoPartial = {0,0,0,0,0,0.001815204,0.010079818};
 		final double[] usaPartial = {0,0.038253436,0.140659444,0.279060364,0.498659917,0.829863407,1.39281703};

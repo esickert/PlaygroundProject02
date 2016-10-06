@@ -9,11 +9,6 @@ public class CellularData {
 	
 	Object[][] anArray;
 	
-	
-//	String[][] anArray = new String[numRows][numColumns];  //this is an array of Object class
-//	String[][] anArray = new String[][];  //this is an array of Object class
-
-	
 	public CellularData()	{    //constructor
 	}
 	
@@ -25,13 +20,24 @@ public class CellularData {
 	}
 //****************************************************************************************************
 //TESTING	
-	public void addCountry(String country, double[] a)	{  
-						
-			anArray[count][0] = country;
-			for (int i = 1; i <= a.length-1; i++)	{       ///OKAY THIS IS WRONG HERE!!! IM TESTING.
-					anArray[count][i] = a[i];
+/*	public void addYear()	{                          				 //NOW I'M HACKING!!!!
+		for(int i = 1983; i <= 1990 +	7; i++)
+				System.out.print( i + "\t");	
+	}  */
+	
+	
+	public void addCountry(String country, double[] a)	{
+		
+			anArray[count][0] = country;							//THIS IS NOT WORKING PROPERLY. OVERWRITES FIRST ENTRY!!!!!
+			for (int i = 1; i <= a.length-1; i++)	{       		//TESTING. 
+				anArray[count][i] = a[i];
 			}
-			System.out.println("count is now: " + count++);
+			count++;
+	}
+	
+	public double getNumSubscriptionsInCountryForPeriod()	{  		//INCOMPLETE METHOD
+		double result = 0.0;
+		return result;
 	}  
 	
 //*****************************************************************************************************	  
