@@ -19,24 +19,21 @@ public class CellularData {
 	
 	public CellularData(int numRows, int numColumns, int startingYear)	{  //REMEMBER PARAMETERS NEED TYPE...CONSTRUCTOR
 		this.numRows = numRows;
-//		this.numColumns = numColumns;  //THIS MAYBE LIMITING THE ARRAYS SIZE  NEED TO USE COUNTRY.LENGTH!!!!!!!!!!!!!!!!!!!
+		this.numColumns = numColumns;  //THIS MAYBE LIMITING THE ARRAYS SIZE  NEED TO USE COUNTRY.LENGTH!!!!!!!!!!!!!!!!!!!
 		this.startingYear = startingYear;
 		anArray = new Object[numRows][numColumns];  //this is an array of Object class
 	}
 //****************************************************************************************************
 //TESTING	
-	public void addCountry(String country, double[] a)	{  //numRows is a global variable??
-			System.out.println("Global variable numRows is " + (numRows));
-//			System.out.println("count is: " + count++);
-			numRows = numRows -1;
+	public void addCountry(String country, double[] a)	{  
 						
 			anArray[count][0] = country;
 			for (int i = 1; i <= a.length-1; i++)	{       ///OKAY THIS IS WRONG HERE!!! IM TESTING.
 					anArray[count][i] = a[i];
 			}
-			System.out.println("Global variable numRows is now: " + (numRows--)); //okay this is decreasing!!!!!!! I'M TESTING
 			System.out.println("count is now: " + count++);
 	}  
+	
 //*****************************************************************************************************	  
 	public String toString()	{ //this works to override java.lang.Object.toString
 		String output = "";
