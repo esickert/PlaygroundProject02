@@ -48,7 +48,7 @@ public class CellularData {
 				output += (anArray[i][j] + "\t");
 			}
 		output += "\n";
-		}                                       // which all subclasses inherit from
+		}                                       
 		return output;
 	}
 
