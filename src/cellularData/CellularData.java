@@ -18,7 +18,7 @@ public class CellularData {
 	
 	public CellularData(int numRows, int numColumns, int startingYear)	{  //REMEMBER PARAMETERS NEED TYPE...CONSTRUCTOR
 		this.numRows = numRows;
-		this.numColumns = 7;  //THIS MAYBE LIMITING THE ARRAYS SIZE
+		this.numColumns = numColumns;  //THIS MAYBE LIMITING THE ARRAYS SIZE  NEED TO USE COUNTRY.LENGTH!!!!!!!!!!!!!!!!!!!
 		this.startingYear = startingYear;
 		anArray = new Object[numRows][numColumns];  //this is an array of Object class
 	}
