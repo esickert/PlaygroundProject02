@@ -14,7 +14,7 @@ public class CellularData {
 	
 	public CellularData(int numRows, int numColumns, int startingYear)	{  //REMEMBER PARAMETERS NEED TYPE...CONSTRUCTOR
 		this.numRows = numRows;
-		this.numColumns = numColumns;  //THIS MAYBE LIMITING THE ARRAYS SIZE  NEED TO USE COUNTRY.LENGTH!!!!!!!!!!!!!!!!!!!
+		this.numColumns = numColumns;  								  //THIS MAY BE LIMITING THE ARRAYS SIZE  NEED TO USE COUNTRY.LENGTH!??????????
 		this.startingYear = startingYear;
 		anArray = new Object[numRows][numColumns];  //this is an array of Object class
 	}
@@ -28,7 +28,7 @@ public class CellularData {
 	
 	public void addCountry(String country, double[] a)	{
 		
-			anArray[count][0] = country;							//THIS IS NOT WORKING PROPERLY. OVERWRITES FIRST ENTRY!!!!!
+//			anArray[count][0] = country;							//THIS IS NOT WORKING PROPERLY. OVERWRITES FIRST ENTRY!!!!!
 			for (int i = 1; i <= a.length-1; i++)	{       		//TESTING. 
 				anArray[count][i] = a[i];
 			}
