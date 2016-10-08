@@ -19,7 +19,7 @@ public class CellularData {
 		this.numColumns = numColumns;  								  //THIS MAY BE LIMITING THE ARRAYS SIZE  NEED TO USE COUNTRY.LENGTH!??????????
 		this.startingYear = startingYear;
 		anArray = new Object[numRows][numColumns + 1];  //this is an array of Object class  NOTE THAT I ADD 1 HERE WHICH IS A HACK!!
-		anotherArray = new Object[startingYear];	    //THIS IS AN ABSOLUTE HACK
+		anotherArray = new Object[startingYear];	    //THIS IS AN ABSOLUTE HACK. HAVEN'T USED THIS YET.
 	}
 //****************************************************************************************************
 //TESTING	
