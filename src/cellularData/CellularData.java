@@ -7,7 +7,9 @@ public class CellularData {
 	int startingYear;
 	int count = 0;
 	
+	Object[] anotherArray;	
 	Object[][] anArray;
+	
 	
 	public CellularData()	{    //constructor
 	}
@@ -16,21 +18,25 @@ public class CellularData {
 		this.numRows = numRows;
 		this.numColumns = numColumns;  								  //THIS MAY BE LIMITING THE ARRAYS SIZE  NEED TO USE COUNTRY.LENGTH!??????????
 		this.startingYear = startingYear;
-		anArray = new Object[numRows][numColumns];  //this is an array of Object class
+		anArray = new Object[numRows][numColumns + 1];  //this is an array of Object class  NOTE THAT I ADD 1 HERE WHICH IS A HACK!!
+		anotherArray = new Object[startingYear];	    //THIS IS AN ABSOLUTE HACK
 	}
 //****************************************************************************************************
 //TESTING	
-/*	public void addYear()	{                          				 //NOW I'M HACKING!!!!
-		for(int i = 1983; i <= 1990 +	7; i++)
-				System.out.print( i + "\t");	
-	}  */
+	public void addYears()	{ 
+		System.out.print("Country Year\t");                         				 //THIS IS WAAAAY NOT RIGHT.
+		for(int i = startingYear; i <= 1990; i++)
+				System.out.print( i + "\t");
+		System.out.println();	
+	}  
 	
 	
 	public void addCountry(String country, double[] a)	{
 		
-//			anArray[count][0] = country;							//THIS IS NOT WORKING PROPERLY. OVERWRITES FIRST ENTRY!!!!!
-			for (int i = 1; i <= a.length-1; i++)	{       		//TESTING. 
-				anArray[count][i] = a[i];
+			anArray[count][0] = country;							//THIS IS NOT WORKING PROPERLY. ARRAY STARTING IS WRONG
+			for (int i = 1; i <= a.length ; i++)	{       		//TESTING. 
+				anArray[count][i] = a[i-1];							//THE LOADING ARRAY IS STARTING AT 1 INSTEAD OF 0. OK THIS WORKS BUT NOT CORRECTLY.
+			
 			}
 			count++;
 	}
