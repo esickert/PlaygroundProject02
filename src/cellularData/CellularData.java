@@ -39,7 +39,7 @@ public class CellularData {
 	
 	public void getNumSubscriptionsInCountryForPeriod(String country, int startYear, int endYear)	{  		//INCOMPLETE METHOD
 	
-		System.out.println(country);
+//		System.out.println(country);
 		System.out.println(startYear);
 	}
 	 
