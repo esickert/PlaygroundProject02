@@ -21,18 +21,18 @@ public class TestCellularData
 		int startingYear = 1983;
 
 		CellularData datatable;    
-		int numRows = 3;
+		int numRows = 3 + 1;                                    //NOTE ADDED 1 HERE FOR TESTING- mystuff
 		int numColumns = canadaPartial.length;
 
 
 		// TODO: Create a CellularData object with the given number of rows, 
 		// 		 columns, and starting year.
 		datatable = new CellularData(numRows, numColumns, startingYear);
-		datatable.addYears();   //***********************************************************************MYSTUFF
+		datatable.loadCountryYears();   //***********************************************************************MYSTUFF     ADDED THIS LINE MYSELF.
 		// TODO: Add a country and its associated data to the table.
 		datatable.addCountry("Canada", canadaPartial);
 		datatable.addCountry("Mexico", mexicoPartial);
-		datatable.addCountry("United States", usaPartial);
+		datatable.addCountry("United States", usaPartial);     //******************mystuff
 		
 		System.out.println(datatable);
 		
@@ -51,6 +51,7 @@ public class TestCellularData
 
 //**************************************************************************************************************************
 		// TODO: Get the total number of cellular subscriptions for a given country and time period.
+		datatable.getNumSubscriptionsInCountryForPeriod("Mexico",1983,1989);   //*********************************MYSTUFF
 //		double totalSubscriptions = datatable.getNumSubscriptionsInCountryForPeriod("United States",1983,1989);
 //		System.out.printf("United States (1983 to 1989): %.2f \n", totalSubscriptions);
 		// country is "usa", subscriptions from 1983 to 1989
