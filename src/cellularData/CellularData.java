@@ -9,8 +9,8 @@ public class CellularData {
 	int startingYear;
 	int count = 1;
 	
-	Object[] anotherArray;	
-	Object[][] anArray;
+//	String[] anotherArray;	
+	String[][] anArray;   //CHANGED THE ARRAY FROM OBJECT TO STRING. CONVERT THE INTEGERS FROM STRING TO INT.
 	
 	
 	public CellularData()	{    //constructor
@@ -22,7 +22,7 @@ public class CellularData {
 		this.numRows = numRows;
 		this.numColumns = numColumns;  								  //THIS MAY BE LIMITING THE ARRAYS SIZE  NEED TO USE COUNTRY.LENGTH!??????????
 		this.startingYear = startingYear;
-		anArray = new Object[numRows][numColumns + 1];  			  //this is an array of Object class  NOTE THAT I ADD 1 HERE WHICH IS A HACK!!
+		this.anArray = new String[numRows][numColumns + 1];  			  
 
 
 			   				  //THIS IS AN ABSOLUTE HACK. HAVEN'T USED THIS YET.
@@ -32,18 +32,23 @@ public class CellularData {
 	public void loadCountryYears()	{ 
 		anArray[0][0] = "Year/Country";							   //THIS USES THE FIRST ROW OF anARRAY TO STORE YEARS
 			for (int i = 1; i <= numColumns ; i++)	{       		   //TESTING. 
-				anArray[0][i] = startingYear;
+				anArray[0][i] = Integer.toString(startingYear);
 				startingYear++;		
 			}
 	} 
-	
+//*****************************************************************************************	
+//*****************************************************************************************	
 	public void getNumSubscriptionsInCountryForPeriod(String country, int startYear, int endYear)	{  		//INCOMPLETE METHOD
-	
-		System.out.println(country);
-		System.out.println(startYear);
+		System.out.println("I'm inside getNumSubscriptionsInCountryForPeriod method");
+		String a = anArray[1][0];
+		String b = "Canada";
+		System.out.println(anArray[1][0]);
+		System.out.println(a.equals(b) );  //THIS IS RETURNING FALSE?????????????????????????????
+            
+		
 	}
-	 
-	
+//******************************************************************************************	 
+//*****************************************************************************************		
 	public void addCountry(String country, double[] a)	{
 		
 			anArray[count][0] = country + "\t";							   //THIS IS NOT WORKING PROPERLY. ARRAY STARTING IS WRONG
