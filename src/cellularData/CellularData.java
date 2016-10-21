@@ -25,12 +25,12 @@ public class CellularData {
 		this.anArray = new String[numRows][numColumns + 1];  			  
 
 
-			   				  //THIS IS AN ABSOLUTE HACK. HAVEN'T USED THIS YET.
+			   				  
 	}
 //****************************************************************************************************
 //TESTING	
 	public void loadCountryYears()	{ 
-		anArray[0][0] = "Year/Country";							   //THIS USES THE FIRST ROW OF anARRAY TO STORE YEARS
+		anArray[0][0] = "Year/Country";							       //THE 2-D ARRAY IS NOW STRING!!!!!!!! DON'T THINK I NEED THIS!!
 			for (int i = 1; i <= numColumns ; i++)	{       		   //TESTING. 
 				anArray[0][i] = Integer.toString(startingYear);
 				startingYear++;		
@@ -39,14 +39,21 @@ public class CellularData {
 //*****************************************************************************************	
 //*****************************************************************************************	
 	public void getNumSubscriptionsInCountryForPeriod(String country, int startYear, int endYear)	{  		//INCOMPLETE METHOD
-		System.out.println("I'm inside getNumSubscriptionsInCountryForPeriod method");
-		String a = anArray[1][0];
-		String b = "Canada";
-		System.out.println(anArray[1][0]);
-		System.out.println(a.equals(b) );  //THIS IS RETURNING FALSE?????????????????????????????
-            
 		
+		System.out.println("This finds the country and stats in the array!!!!!");
+		for(int i = 1; i <= anArray.length - 1; i++)	{
+			if (anArray[i][0].contains(country))	{									//REMEMBER <>.contains(<>)
+				System.out.print(country + "\t\t");										//THIS NOW FUCKING WORKS!!!!!!
+				for(int j = 1; j <= anArray[i].length-1; j++)	{
+					System.out.print(anArray[i][j] + "\t\t");
+				}
+				System.out.println();
+			}
+//			else
+//				System.out.println(anArray[i][0]);
+		}
 	}
+				
 //******************************************************************************************	 
 //*****************************************************************************************		
 	public void addCountry(String country, double[] a)	{

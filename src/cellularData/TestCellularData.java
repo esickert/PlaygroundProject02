@@ -51,7 +51,7 @@ public class TestCellularData
 
 //**************************************************************************************************************************
 		// TODO: Get the total number of cellular subscriptions for a given country and time period.
-		datatable.getNumSubscriptionsInCountryForPeriod("Mexico",1983,1989);   //*********************************MYSTUFF
+		datatable.getNumSubscriptionsInCountryForPeriod("USA",1983,1989);   //*********************************MYSTUFF
 //		double totalSubscriptions = datatable.getNumSubscriptionsInCountryForPeriod("United States",1983,1989);
 //		System.out.printf("United States (1983 to 1989): %.2f \n", totalSubscriptions);
 		// country is "usa", subscriptions from 1983 to 1989
