@@ -42,7 +42,7 @@ public class CellularData {
 		
 		System.out.println("This finds the country and stats in the array!!!!!");
 		for(int i = 1; i <= anArray.length - 1; i++)	{
-			if (anArray[i][0].contains(country))	{									//REMEMBER <>.contains(<>)
+			if (anArray[i][0].contains(country))	{									//REMEMBER <>.contains(<>) although not sure this is correct!!!!!
 				System.out.print(country + "\t\t");										//THIS NOW FUCKING WORKS!!!!!!
 				for(int j = 1; j <= anArray[i].length-1; j++)	{
 					System.out.print(anArray[i][j] + "\t\t");
@@ -66,8 +66,14 @@ public class CellularData {
 			count++;
 	}
 	
-	
-  
+/*	@Override	
+ 	public boolean equals(String[][] a, String b)	{
+ 		
+ 		if (a.contains(b))
+ 			return true;
+ 		else return false;
+	} 
+ */
 	
 //*****************************************************************************************************	  
 	@Override   //using this as a safety check that i didn't misspell anything
