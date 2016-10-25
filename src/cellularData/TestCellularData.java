@@ -5,7 +5,7 @@ package cellularData;
  *  Given a country name and a range of years, computes the total number of subscriptions
  *  during that period.
  *
- *  @author Foothill College, erich c. sickert
+ *  @author erich c. sickert
  */
 public class TestCellularData 
 {
@@ -27,10 +27,11 @@ public class TestCellularData
 
 		// TODO: Create a CellularData object with the given number of rows, 
 		// 		 columns, and starting year.
-		datatable = new CellularData(numRows, numColumns, startingYear);		datatable.loadCountryYears();   //***********************************************************************MYSTUFF     ADDED THIS LINE MYSELF.
+		datatable = new CellularData(numRows, numColumns, startingYear);
+		datatable.loadCountryYears();   //***************************************************MYSTUFF     ADDED THIS LINE MYSELF.
 		// TODO: Add a country and its associated data to the table.
 		datatable.addCountry("Canada", canadaPartial);
-		datatable.addCountry("Mexico", mexicoPartial);
+ 		datatable.addCountry("Mexico", mexicoPartial);
 		datatable.addCountry("USA", usaPartial);     //******************MYSTUFF-CHANGED UNITED STATES TO USA
 		
 		System.out.println(datatable);
@@ -50,7 +51,7 @@ public class TestCellularData
 
 //**************************************************************************************************************************
 		// TODO: Get the total number of cellular subscriptions for a given country and time period.
-		datatable.getNumSubscriptionsInCountryForPeriod("USA",1983,1989);   //*********************************MYSTUFF
+		datatable.getNumSubscriptionsInCountryForPeriod("Mexico",1983,1989);   //*********************************MYSTUFF
 //		double totalSubscriptions = datatable.getNumSubscriptionsInCountryForPeriod("United States",1983,1989);
 //		System.out.printf("United States (1983 to 1989): %.2f \n", totalSubscriptions);
 		// country is "usa", subscriptions from 1983 to 1989
@@ -104,16 +105,16 @@ public class TestCellularData
 		//        So, do *not* assume that the data will always start from 1960 or end in on a particular year.
 		startingYear = 1960;
 
-		numRows = 3;
+		numRows = 3 + 1;
 		numColumns = canada.length;
 
-//		datatable = new CellularData(numRows, numColumns, startingYear);
+		datatable = new CellularData(numRows, numColumns, startingYear);
+		datatable.loadCountryYears(); //*********************************************MYSTUFF***SHE ONLY GIVES 3 ROWS PER 2D ARRAY
+		datatable.addCountry("Canada", canada);
+		datatable.addCountry("Mexico", mexico);
+		datatable.addCountry("USA", usa);
 
-//		datatable.addCountry("Canada", canada);
-//		datatable.addCountry("Mexico", mexico);
-//		datatable.addCountry("United States", usa);
-
-//		System.out.println(datatable);
+		System.out.println(datatable);
 		// the output is:
 		/*
 		Testing with All Data:
@@ -124,8 +125,8 @@ public class TestCellularData
 		 */
 		// Note: As long as your output is easily readable,
 		//       then the alignment (i.e. tabs and white-space) of your output need not match mine.
-
-//		totalSubscriptions = datatable.getNumSubscriptionsInCountryForPeriod("United States",1983,1989);
+		datatable.getNumSubscriptionsInCountryForPeriod("Mexico",1983,1989);  //*************************************MYSTUFF
+//  		totalSubscriptions = datatable.getNumSubscriptionsInCountryForPeriod("United States",1983,1989);
 //		System.out.printf("United States (1983 to 1989): %.2f \n", totalSubscriptions);
 		// the output is:
 		// United States (1983 to 1989): 3.18
