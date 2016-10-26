@@ -18,7 +18,7 @@ public class TestCellularData
 		final double[] usaPartial = {0,0.038253436,0.140659444,0.279060364,0.498659917,0.829863407,1.39281703};
 
 
-		int startingYear = 1983;
+		int startingYear = 1989;
 
 		CellularData datatable;    
 		int numRows = 3 + 1;                                    //NOTE ADDED 1 HERE FOR TESTING- mystuff
@@ -51,7 +51,7 @@ public class TestCellularData
 
 //**************************************************************************************************************************
 		// TODO: Get the total number of cellular subscriptions for a given country and time period.
-		datatable.getNumSubscriptionsInCountryForPeriod("Mexico",1983,1989);   //*********************************MYSTUFF
+		datatable.getNumSubscriptionsInCountryForPeriod("Mexico",startingYear ,1989);   //*********************************MYSTUFF
 //		double totalSubscriptions = datatable.getNumSubscriptionsInCountryForPeriod("United States",1983,1989);
 //		System.out.printf("United States (1983 to 1989): %.2f \n", totalSubscriptions);
 		// country is "usa", subscriptions from 1983 to 1989
@@ -108,7 +108,7 @@ public class TestCellularData
 		numRows = 3 + 1;
 		numColumns = canada.length;
 
-		datatable = new CellularData(numRows, numColumns, startingYear);
+		datatable = new CellularData(numRows, numColumns, startingYear);  //HAVE TO REINITIALIZE THE DATATABLE
 		datatable.loadCountryYears(); //*********************************************MYSTUFF***SHE ONLY GIVES 3 ROWS PER 2D ARRAY
 		datatable.addCountry("Canada", canada);
 		datatable.addCountry("Mexico", mexico);
@@ -125,17 +125,19 @@ public class TestCellularData
 		 */
 		// Note: As long as your output is easily readable,
 		//       then the alignment (i.e. tabs and white-space) of your output need not match mine.
-		datatable.getNumSubscriptionsInCountryForPeriod("Mexico",1983,1989);  //*************************************MYSTUFF
+		datatable.getNumSubscriptionsInCountryForPeriod("USA",1983,1989);  //*************************************MYSTUFF
 //  		totalSubscriptions = datatable.getNumSubscriptionsInCountryForPeriod("United States",1983,1989);
 //		System.out.printf("United States (1983 to 1989): %.2f \n", totalSubscriptions);
 		// the output is:
 		// United States (1983 to 1989): 3.18
 
+		datatable.getNumSubscriptionsInCountryForPeriod("Mexico",1960,2000);
 //		totalSubscriptions = datatable.getNumSubscriptionsInCountryForPeriod("Mexico",1960,2000);
 //		System.out.printf("Mexico (1960 to 2000): %.2f \n", totalSubscriptions);
 		// the output is:
 		// Mexico (1960 to 2000): 29.62
 
+		datatable.getNumSubscriptionsInCountryForPeriod("Canada",1890, 2000);
 //		totalSubscriptions = datatable.getNumSubscriptionsInCountryForPeriod("Canada",1890, 2000);
 //		System.out.printf("Canada (1890 to 2000): %.2f \n", totalSubscriptions);
 		// the output is:
