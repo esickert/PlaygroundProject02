@@ -58,24 +58,15 @@ public class CellularData {
 				
 //******************************************************************************************	 
 //*****************************************************************************************		
-	public void addCountry(String country, double[] a)	{
+	public void addCountry(String country, double[] a)	{          //THE ARRAY WILL STORE DATA AS A STRING THEN CONVERT INT STRINGS TO INTEGERS.
 		
-			anArray[count][0] = country + "\t";							   //THIS IS NOT WORKING PROPERLY. ARRAY STARTING IS WRONG
-			for (int i = 1; i <= a.length ; i++)	{       		   //TESTING. 
-				anArray[count][i] = decimalPlaces.format(a[i-1]);				   //THE LOADING ARRAY IS STARTING AT 1 INSTEAD OF 0. OK THIS WORKS BUT NOT CORRECTLY.
-																	   //decimalPlaces SETS THE DECIMAL PLACES. USES DECIMALFORMAT CLASS 
+			anArray[count][0] = country + "\t";							   
+			for (int i = 1; i <= a.length ; i++)	{       		    
+				anArray[count][i] = decimalPlaces.format(a[i-1]);  //decimalPlaces SETS THE DECIMAL PLACES. USES DECIMALFORMAT CLASS 			   
+																	   
 			}
 			count++;
 	}
-	
-/*	@Override	
- 	public boolean equals(String[][] a, String b)	{
- 		
- 		if (a.contains(b))
- 			return true;
- 		else return false;
-	} 
- */
 	
 //*****************************************************************************************************	  
 	@Override   //using this as a safety check that i didn't misspell anything
