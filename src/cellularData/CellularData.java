@@ -6,7 +6,7 @@ public class CellularData {
 	private static DecimalFormat decimalPlaces = new DecimalFormat("##.###");  //THIS SETS THE NUMBER OF PLACES TO THE RIGHT OF THE DECIMAL POINT.
 	int numRows;    
 	int numColumns;
-	int startingYear = 1984;
+	int startingYear;
 	int count = 1;
 	
 //	String[] anotherArray;	//IF I NEED THIS ARRAY FOR THE YEARS. THIS WILL BE AN ARRAY OF INTEGERS
@@ -38,7 +38,7 @@ public class CellularData {
 	} 
 //*****************************************************************************************	
 //*****************************************************************************************	
-	public void getNumSubscriptionsInCountryForPeriod(String country, int startYear, int endYear)	{  		//INCOMPLETE METHOD
+	public double getNumSubscriptionsInCountryForPeriod(String country, int startYear, int endYear)	{  		//INCOMPLETE METHOD
 		double temp = 0.00;
 		System.out.println("This finds the country and stats in the array!!!!!");
 		for(int i = 1; i <= anArray.length - 1; i++)	{
@@ -48,7 +48,7 @@ public class CellularData {
 					System.out.print(anArray[i][j] + "\t\t");
 					temp = temp + (Double.parseDouble(anArray[i][j]));
 				}
-				System.out.println("\n");
+				
 			}
 		}
 		for (int i = 1; i < anArray[0].length - 1; i++)    {  //there is an oject -type problem here!!!!!ARRAYS ARE NOW STRINGS.
@@ -56,7 +56,7 @@ public class CellularData {
         	int b = Integer.parseInt(anArray[0][i]);          //string parsed to integer
 //	       	System.out.println(i);
        		if (b == startYear)    {
-            	System.out.println("The index of " + b + " is " + i);
+            	System.out.println("The index of " + b + " is " + i + "  THIS WORKS!!!!!");
             	break;
         	}
 		
@@ -65,7 +65,7 @@ public class CellularData {
 		System.out.println("This prints the country and it's total cellular stats! Need to figure out year period.");
 		System.out.println("The country is " + country);
 		System.out.println(country + ": " + decimalPlaces.format(temp) + "\n");
-		
+		return temp;
 	}
 				
 //******************************************************************************************	 
@@ -89,7 +89,7 @@ public class CellularData {
 	}
 
 	public void addCountry(String country, double[] a)	{          //THE ARRAY WILL STORE DATA AS A STRING THEN CONVERT INT STRINGS TO INTEGERS.
-	//BE SURE TO REINITIALIZE THE ARRAY!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!USING "NEW ARRAY STRING[][]"	
+	//BE SURE TO REINITIALIZE THE ARRAY FOR NEW DATASET!!!!!!!!!!!!!!!!!!!!!!USING "NEW ARRAY STRING[][]"	
 			anArray[count][0] = country + "\t";							   
 			for (int i = 1; i <= a.length; i++)	{       		    
 				anArray[count][i] = decimalPlaces.format(a[i-1]);  //decimalPlaces SETS THE DECIMAL PLACES. USES DECIMALFORMAT CLASS 			   
