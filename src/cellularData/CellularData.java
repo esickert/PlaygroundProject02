@@ -9,7 +9,6 @@ public class CellularData {
 	int startingYear;
 	int count = 1;
 	
-//	String[] anotherArray;	//IF I NEED THIS ARRAY FOR THE YEARS. THIS WILL BE AN ARRAY OF INTEGERS
 	String[][] anArray;   //CHANGED THE ARRAY FROM OBJECT TO STRING. CONVERT THE INTEGERS FROM STRING TO INT.
 	
 	
@@ -21,7 +20,7 @@ public class CellularData {
 		
 		this.numRows = numRows;
 		this.numColumns = numColumns;  								  //THIS MAY BE LIMITING THE ARRAYS SIZE  NEED TO USE COUNTRY.LENGTH!??????????
-		this.startingYear = startingYear;
+		this.startingYear = startingYear;							//why is this needed
 		this.anArray = new String[numRows][numColumns + 1];  			  
 
 
@@ -48,20 +47,25 @@ public class CellularData {
 					System.out.print(anArray[i][j] + "\t\t");
 					temp = temp + (Double.parseDouble(anArray[i][j]));
 				}
-				
 			}
 		}
+		
 		for (int i = 1; i < anArray[0].length - 1; i++)    {  //there is an oject -type problem here!!!!!ARRAYS ARE NOW STRINGS.
-//      	int foo = Integer.parseInt("1234");
         	int b = Integer.parseInt(anArray[0][i]);          //string parsed to integer
-//	       	System.out.println(i);
+//	       	System.out.println();
        		if (b == startYear)    {
-            	System.out.println("The index of " + b + " is " + i + "  THIS WORKS!!!!!");
+            	System.out.println("\n**************************************************The index of " + b + " is " + i + "  **********************!!!!!");
             	break;
         	}
-		
-//        else System.out.println(startYear + " is not in the array!!!!");
 		}
+		
+		for(int i = startYear; i <= endYear; i++)	{  // this prints out the year string
+			System.out.print(i + "\t");
+		}
+		System.out.println("*********the year string************************************");
+
+			
+				
 		System.out.println("This prints the country and it's total cellular stats! Need to figure out year period.");
 		System.out.println("The country is " + country);
 		System.out.println(country + ": " + decimalPlaces.format(temp) + "\n");
@@ -71,7 +75,7 @@ public class CellularData {
 	 
 //*****************************************************************************************		
 
-	public void AddYear(String[][] a)	{
+/*	public void AddYear(String[][] a)	{
 	
 	//    int startingYear = 1983;
     	int endingYear = 1987;
@@ -79,14 +83,15 @@ public class CellularData {
     	for (int i = 1; i < a[0].length - 1; i++)    {  //there is an oject -type problem here!!!!!ARRAYS ARE NOW STRINGS.
 //      	int foo = Integer.parseInt("1234");
         	int b = Integer.parseInt(a[0][i]);          //string parsed to integer
-//        	System.out.println(i);
+        	System.out.println();
        		if (b == 1987)    {
-            	System.out.println("The index of 1987 is " + i);
+ //           	System.out.println("The index of 1987 is " + i);
             	break;
         	}
 //        else System.out.println(a + " is not in the array!!!!");
     }
 	}
+*/
 
 	public void addCountry(String country, double[] a)	{          //THE ARRAY WILL STORE DATA AS A STRING THEN CONVERT INT STRINGS TO INTEGERS.
 	//BE SURE TO REINITIALIZE THE ARRAY FOR NEW DATASET!!!!!!!!!!!!!!!!!!!!!!USING "NEW ARRAY STRING[][]"	
