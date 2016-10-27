@@ -36,7 +36,7 @@ public class CellularData {
 				startingYear++;		
 			}
 	} 
-//*****************************************************************************************	
+	
 //*****************************************************************************************	
 	public double getNumSubscriptionsInCountryForPeriod(String country, int startYear, int endYear)	{  		//INCOMPLETE METHOD
 		double temp = 0.00;
@@ -68,7 +68,7 @@ public class CellularData {
 		return temp;
 	}
 				
-//******************************************************************************************	 
+	 
 //*****************************************************************************************		
 
 	public void AddYear(String[][] a)	{
