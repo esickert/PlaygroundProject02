@@ -15,15 +15,13 @@ public class CellularData {
 	public CellularData()	{    //constructor
 	}
 	
-	public CellularData(int numRows, int numColumns, int startingYear)	{  //REMEMBER PARAMETERS NEED TYPE...CONSTRUCTOR
+	public CellularData(int numRows, int numColumns, int startingYear)	{  //REMEMBER PARAMETERS NEED TYPE...THIS IS A CONSTRUCTOR!!!!!!!!!!!!
 		
 		
 		this.numRows = numRows;
 		this.numColumns = numColumns;  								  //THIS MAY BE LIMITING THE ARRAYS SIZE  NEED TO USE COUNTRY.LENGTH!??????????
 		this.startingYear = startingYear;							//why is this needed
 		this.anArray = new String[numRows][numColumns + 1];  			  
-
-
 			   				  
 	}
 //****************************************************************************************************
@@ -63,8 +61,6 @@ public class CellularData {
 			System.out.print(i + "\t");
 		}
 		System.out.println("*********the year string************************************");
-
-			
 				
 		System.out.println("This prints the country and it's total cellular stats! Need to figure out year period.");
 		System.out.println("The country is " + country);
