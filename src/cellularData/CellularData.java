@@ -1,6 +1,6 @@
 package cellularData;
 
-import java.text.DecimalFormat;  //CLASS TO SET THE DECIMAL OUTPUT TO SPECIFIC DECIMAL PALCES
+import java.text.DecimalFormat;  //CLASS TO SET THE DECIMAL OUTPUT TO SPECIFIC DECIMAL PLACES
 
 public class CellularData {
 	private static DecimalFormat decimalPlaces = new DecimalFormat("##.###");  //THIS SETS THE NUMBER OF PLACES TO THE RIGHT OF THE DECIMAL POINT.
