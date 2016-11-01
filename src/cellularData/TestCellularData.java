@@ -104,7 +104,7 @@ public class TestCellularData
 
 		// NOTE: Your program should be able to handle a variety of ranges of years (i.e. start year to end year). 
 		//        So, do *not* assume that the data will always start from 1960 or end in on a particular year.
-/*		startingYear = 1960;
+		startingYear = 1960;
 
 		numRows = 3 + 1;
 		numColumns = canada.length;
@@ -115,7 +115,7 @@ public class TestCellularData
 		datatable.addCountry("Mexico", mexico);
 		datatable.addCountry("USA", usa);
 
-		System.out.println(datatable);*/
+		System.out.println(datatable);
 		// the output is:
 		/*
 		Testing with All Data:
@@ -126,7 +126,7 @@ public class TestCellularData
 		 */
 		// Note: As long as your output is easily readable,
 		//       then the alignment (i.e. tabs and white-space) of your output need not match mine.
-//		datatable.getNumSubscriptionsInCountryForPeriod("USA",1983,1989);  //*************************************MYSTUFF
+		datatable.getNumSubscriptionsInCountryForPeriod("USA",1983,1989);  //*************************************MYSTUFF
 //  		totalSubscriptions = datatable.getNumSubscriptionsInCountryForPeriod("United States",1983,1989);
 //		System.out.printf("United States (1983 to 1989): %.2f \n", totalSubscriptions);
 		// the output is:
