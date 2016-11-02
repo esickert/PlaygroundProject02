@@ -51,15 +51,15 @@ public class TestCellularData
 
 //**************************************************************************************************************************
 		// TODO: Get the total number of cellular subscriptions for a given country and time period.
-		datatable.getNumSubscriptionsInCountryForPeriod("USA",1985 ,1989);   //*********************************MYSTUFF
-		double totalSubscriptions = datatable.getNumSubscriptionsInCountryForPeriod("United States",1983,1989);
-		System.out.printf("*****************************United States (1983 to 1989): %.2f \n", totalSubscriptions);
+//		datatable.getNumSubscriptionsInCountryForPeriod("USA",1985 ,1989);   //*********************************MYSTUFF
+		double totalSubscriptions = datatable.getNumSubscriptionsInCountryForPeriod("USA",1983,1989);
+		System.out.printf("USA (1983 to 1989): %.2f \n", totalSubscriptions);
 		// country is "usa", subscriptions from 1983 to 1989
 		// the output is: 
 		// United States (1983 to 1989): 3.18 
 
 		totalSubscriptions = datatable.getNumSubscriptionsInCountryForPeriod("Mexico",1987,1989);
-		System.out.printf("******************************Mexico (1983 to 1989): %.2f \n", totalSubscriptions);
+		System.out.printf("Mexico (1983 to 1989): %.2f \n", totalSubscriptions);
 		// country is "mexico", subscriptions from 1983 to 1989
 		// the output is:
 		// Mexico (1983 to 1989): 0.01 
@@ -75,7 +75,7 @@ public class TestCellularData
 		//				
 //		totalSubscriptions = datatable.getNumSubscriptionsInCountryForPeriod("Canada",1890, 2000);   
 		totalSubscriptions = datatable.getNumSubscriptionsInCountryForPeriod("Canada",1986, 2000);    //************************MYSTUFF-changed year 1890 to 1986
-		System.out.printf("******************************Canada (1890 to 2000): %.2f \n", totalSubscriptions);
+		System.out.printf("Canada (1890 to 2000): %.2f \n", totalSubscriptions);
 		// the output is:
 		// Illegal Argument Request of start year 1890. Valid period for Canada is 1890 to 2000.
 		// Canada (1890 to 2000): -1.00 
@@ -115,7 +115,7 @@ public class TestCellularData
 		datatable.addCountry("Mexico", mexico);
 		datatable.addCountry("USA", usa);
 
-		System.out.println(datatable);
+//		System.out.println(datatable);
 		// the output is:
 		/*
 		Testing with All Data:

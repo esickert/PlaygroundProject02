@@ -3,7 +3,7 @@ package cellularData;
 import java.text.DecimalFormat;  //CLASS TO SET THE DECIMAL OUTPUT TO SPECIFIC DECIMAL PLACES
 
 public class CellularData {
-	private static DecimalFormat decimalPlaces = new DecimalFormat("##.###");  //THIS SETS THE NUMBER OF PLACES TO THE RIGHT OF THE DECIMAL POINT.
+	private static DecimalFormat decimalPlaces = new DecimalFormat("##.##");  //THIS SETS THE NUMBER OF PLACES TO THE RIGHT OF THE DECIMAL POINT.
 	int numRows;    
 	int numColumns;
 	int startingYear;
@@ -39,7 +39,8 @@ public class CellularData {
 		double temp = 0.00;
 		System.out.println("This finds the country and stats in the array!!!!!");
 		for(int i = 1; i <= anArray.length - 1; i++)	{
-			if (anArray[i][0].contains(country))	{									//REMEMBER <>.contains(<>) although not sure this is correct bit it works.
+			if (anArray[i][0].contains(country))	{				//REMEMBER <>.contains(<>) although not sure this is correct bit it works.
+				System.out.println("THIS WILL PRINT OUT THE INDIVIDUAL COUNTRY STATS:");									
 				System.out.print(country + "\t\t");										//THIS NOW FUCKING WORKS!!!!!!
 				for(int j = 1; j <= anArray[i].length-1; j++)	{
 					System.out.print(anArray[i][j] + "\t\t");
@@ -52,7 +53,7 @@ public class CellularData {
         	int b = Integer.parseInt(anArray[0][i]);          //string parsed to integer
 //	       	System.out.println();
        		if (b == startYear)    {
-            	System.out.println("\n**************************************************The index of " + b + " is " + i + "  **********************!!!!!");
+            	System.out.println("\nThe index of " + b + " is " + i + "\n");
             	break;
         	}
 		}
@@ -60,7 +61,7 @@ public class CellularData {
 		for(int i = startYear; i <= endYear; i++)	{  // this prints out the year string
 			System.out.print(i + "\t");
 		}
-		System.out.println("*********the year string************************************");
+//		System.out.println("\nThe year string");
 				
 		System.out.println("This prints the country and it's total cellular stats! Need to figure out year period.");
 		System.out.println("The country is " + country);
