@@ -126,7 +126,7 @@ public class TestCellularData
 		 */
 		// Note: As long as your output is easily readable,
 		//       then the alignment (i.e. tabs and white-space) of your output need not match mine.
-		datatable.getNumSubscriptionsInCountryForPeriod("USA",1983,1989);  //*************************************MYSTUFF
+//		datatable.getNumSubscriptionsInCountryForPeriod("USA",1983,1989);  //*************************************MYSTUFF
 //  		totalSubscriptions = datatable.getNumSubscriptionsInCountryForPeriod("United States",1983,1989);
 //		System.out.printf("United States (1983 to 1989): %.2f \n", totalSubscriptions);
 		// the output is:
