@@ -51,7 +51,6 @@ public class TestCellularData
 
 //**************************************************************************************************************************
 		// TODO: Get the total number of cellular subscriptions for a given country and time period.
-//		datatable.getNumSubscriptionsInCountryForPeriod("USA",1985 ,1989);   //*********************************MYSTUFF
 		double totalSubscriptions = datatable.getNumSubscriptionsInCountryForPeriod("USA",1983,1989);
 		System.out.printf("USA (1983 to 1989): %.2f \n", totalSubscriptions);
 		// country is "usa", subscriptions from 1983 to 1989
@@ -74,12 +73,10 @@ public class TestCellularData
 		//				   total number of subscriptions for the valid sub-period.
 		//				
 //		totalSubscriptions = datatable.getNumSubscriptionsInCountryForPeriod("Canada",1890, 2000);   
-		totalSubscriptions = datatable.getNumSubscriptionsInCountryForPeriod("Canada",1986, 2000);    //************************MYSTUFF-changed year 1890 to 1986
 		System.out.printf("Canada (1890 to 2000): %.2f \n", totalSubscriptions);
 		// the output is:
 		// Illegal Argument Request of start year 1890. Valid period for Canada is 1890 to 2000.
 		// Canada (1890 to 2000): -1.00 
-
 
 		// Part 2: Testing with all data for a country --------------------------------------------
 		System.out.println("\n\nTesting with All Data:");
