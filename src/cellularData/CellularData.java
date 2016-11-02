@@ -49,7 +49,7 @@ public class CellularData {
 			}
 		}
 		
-		for (int i = 1; i < anArray[0].length - 1; i++)    {  //there is an oject -type problem here!!!!!ARRAYS ARE NOW STRINGS.
+		for (int i = 1; i < anArray[0].length - 1; i++)    {  //there is an obc ject -type problem here!!!!!ARRAYS ARE NOW STRINGS.
         	int b = Integer.parseInt(anArray[0][i]);          //string parsed to integer
 //	       	System.out.println();
        		if (b == startYear)    {
@@ -63,7 +63,7 @@ public class CellularData {
 		}
 //		System.out.println("\nThe year string");
 				
-		System.out.println("This prints the country and it's total cellular stats! Need to figure out year period.");
+		System.out.println("\nThis prints the country and it's total cellular stats! Need to figure out year period.");
 		System.out.println("The country is " + country);
 		System.out.println(country + ": " + decimalPlaces.format(temp) + "\n");
 		return temp;
