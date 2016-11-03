@@ -28,11 +28,11 @@ public class TestCellularData
 		// TODO: Create a CellularData object with the given number of rows, 
 		// 		 columns, and starting year.
 		datatable = new CellularData(numRows, numColumns, startingYear);
-		datatable.loadCountryYears();               //*******************MYSTUFF     WE NEED TO ADD THE COUMTRY/YEARS  SOMEHOW????.
+		datatable.loadCountryYears();                                    //*******************MYSTUFF-WE NEED TO ADD THE COUMTRY/YEARS  SOMEHOW????.
 		// TODO: Add a country and its associated data to the table.
 		datatable.addCountry("Canada", canadaPartial);
  		datatable.addCountry("Mexico", mexicoPartial);
-		datatable.addCountry("USA", usaPartial);     //******************MYSTUFF-CHANGED UNITED STATES TO USA SO TABLE LINES UP NICELY!!!
+		datatable.addCountry("USA", usaPartial);                         //******************MYSTUFF-CHANGED UNITED STATES TO USA SO TABLE LINES UP NICELY!!!
 		
 		System.out.println(datatable);
 		
@@ -112,7 +112,7 @@ public class TestCellularData
 		datatable.addCountry("Mexico", mexico);
 		datatable.addCountry("USA", usa);
 
-//		System.out.println(datatable);
+		System.out.println(datatable);
 		// the output is:
 		/*
 		Testing with All Data:

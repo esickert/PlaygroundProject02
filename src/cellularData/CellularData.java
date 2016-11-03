@@ -12,25 +12,22 @@ public class CellularData {
 	String[][] anArray;   //CHANGED THE ARRAY FROM OBJECT TO STRING. CONVERT THE INTEGERS FROM STRING TO INT.
 	
 	
-	public CellularData()	{    //constructor
-	}
+//	public CellularData()	{    //constructor
+//	}
 	
 	public CellularData(int numRows, int numColumns, int startingYear)	{  //REMEMBER PARAMETERS NEED TYPE...THIS IS A CONSTRUCTOR!!!!!!!!!!!!
-		
-		
 		this.numRows = numRows;
-		this.numColumns = numColumns;  								  //THIS MAY BE LIMITING THE ARRAYS SIZE  NEED TO USE COUNTRY.LENGTH!??????????
-		this.startingYear = startingYear;							//why is this needed
+		this.numColumns = numColumns;  								  
+		this.startingYear = startingYear;							
 		this.anArray = new String[numRows][numColumns + 1];  			  
-			   				  
 	}
 //****************************************************************************************************
 //TESTING	
 	public void loadCountryYears()	{ 
-		anArray[0][0] = "Country/Year";							       //THE 2-D ARRAY IS NOW STRING!!!!!!!! DON'T THINK I NEED THIS!!
-			for (int i = 1; i <= numColumns ; i++)	{       		   //TESTING. 
-				anArray[0][i] = Integer.toString(startingYear);
-				startingYear++;		
+		anArray[0][0] = "Country/Year";							       //THE ELEMENNTS OF THE ARRAY ARE STRINGS
+			for (int i = 1; i <= numColumns ; i++)	{       		    
+				anArray[0][i] = Integer.toString(startingYear);        //CONVERTING THE INTEGER YEARS TO STRINGS.
+				startingYear++;		 								   //ARRAY SIZE IS BASED ON NUMBER OF COLUMNS.
 			}
 	} 
 	
