@@ -27,7 +27,7 @@ public class CellularData {
 //****************************************************************************************************
 //TESTING	
 	public void loadCountryYears()	{ 
-		anArray[0][0] = "Year/Country";							       //THE 2-D ARRAY IS NOW STRING!!!!!!!! DON'T THINK I NEED THIS!!
+		anArray[0][0] = "Country/Year";							       //THE 2-D ARRAY IS NOW STRING!!!!!!!! DON'T THINK I NEED THIS!!
 			for (int i = 1; i <= numColumns ; i++)	{       		   //TESTING. 
 				anArray[0][i] = Integer.toString(startingYear);
 				startingYear++;		
@@ -49,9 +49,8 @@ public class CellularData {
 			}
 		}
 		
-		for (int i = 1; i < anArray[0].length - 1; i++)    {  //there is an obc ject -type problem here!!!!!ARRAYS ARE NOW STRINGS.
+		for (int i = 1; i < anArray[0].length - 1; i++)    {  //there is an object -type problem here!!!!!ARRAYS ARE NOW STRINGS.
         	int b = Integer.parseInt(anArray[0][i]);          //string parsed to integer
-//	       	System.out.println();
        		if (b == startYear)    {
             	System.out.println("\nThe index of " + b + " is " + i + "\n");
             	break;

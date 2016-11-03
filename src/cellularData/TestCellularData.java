@@ -32,7 +32,7 @@ public class TestCellularData
 		// TODO: Add a country and its associated data to the table.
 		datatable.addCountry("Canada", canadaPartial);
  		datatable.addCountry("Mexico", mexicoPartial);
-		datatable.addCountry("USA", usaPartial);     //******************MYSTUFF-CHANGED UNITED STATES TO USA
+		datatable.addCountry("USA", usaPartial);     //******************MYSTUFF-CHANGED UNITED STATES TO USA SO TABLE LINES UP NICELY!!!
 		
 		System.out.println(datatable);
 		
