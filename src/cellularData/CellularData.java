@@ -11,10 +11,6 @@ public class CellularData {
 	
 	String[][] anArray;   //CHANGED THE ARRAY FROM OBJECT TO STRING. CONVERT THE INTEGERS FROM STRING TO INT.
 	
-	
-//	public CellularData()	{    //constructor
-//	}
-	
 	public CellularData(int numRows, int numColumns, int startingYear)	{  //REMEMBER PARAMETERS NEED TYPE...THIS IS A CONSTRUCTOR!!!!!!!!!!!!
 		this.numRows = numRows;
 		this.numColumns = numColumns;  								  
@@ -22,7 +18,7 @@ public class CellularData {
 		this.anArray = new String[numRows][numColumns + 1];  			  
 	}
 //****************************************************************************************************
-//TESTING	
+	
 	public void loadCountryYears()	{ 
 		anArray[0][0] = "Country/Year";							       //THE ELEMENNTS OF THE ARRAY ARE STRINGS
 			for (int i = 1; i <= numColumns ; i++)	{       		    
@@ -34,13 +30,14 @@ public class CellularData {
 //*****************************************************************************************	
 	public double getNumSubscriptionsInCountryForPeriod(String country, int startYear, int endYear)	{  		//INCOMPLETE METHOD
 		double temp = 0.00;
+		int index = 0;
 //		System.out.println("This finds the country and stats in the array!!!!!");
 		for(int i = 1; i <= anArray.length - 1; i++)	{
-			if (anArray[i][0].contains(country))	{				//REMEMBER <>.contains(<>) although not sure this is correct bit it works.
+			if (anArray[i][0].contains(country))	{				//REMEMBER <>.contains(<>) although not sure this is correct but it works.
 //				System.out.println("THIS WILL PRINT OUT THE INDIVIDUAL COUNTRY STATS:");									
-				System.out.print(country + "\t\t");										//THIS NOW FUCKING WORKS!!!!!!
+//				System.out.print(country + "\t\t");										
 				for(int j = 1; j <= anArray[i].length-1; j++)	{
-//					System.out.print(anArray[i][j] + "\t\t");
+					System.out.print(anArray[i][j] + "\t\t");
 					temp = temp + (Double.parseDouble(anArray[i][j]));
 				}
 			}
@@ -50,18 +47,21 @@ public class CellularData {
         	int b = Integer.parseInt(anArray[0][i]);          //string parsed to integer
        		if (b == startYear)    {
             	System.out.println("\nThe index of " + b + " is " + i + "\n");
+            	index = i;
             	break;
         	}
-		}
+		} 
 		
-		for(int i = startYear; i <= endYear; i++)	{  // this prints out the year string
-			System.out.print(i + "\t");
-		}
-		System.out.println("\n");
+
+
+
+
+//		for(int i = startYear; i <= endYear; i++)	{  // this prints out the year string
+//			System.out.print(i + "\t");
+//		}  
+		System.out.println();  //add lines between output
 				
-//		System.out.println("\nThis prints the country and it's total cellular stats! Need to figure out year period.");
-//		System.out.println("The country is " + country);
-//		System.out.println(country + ": " + decimalPlaces.format(temp) + "\n");
+		System.out.println(country + ": " + decimalPlaces.format(temp) + "\n");
 		return temp;
 	}
 				
@@ -91,7 +91,6 @@ public class CellularData {
 			anArray[count][0] = country + "\t";							   
 			for (int i = 1; i <= a.length; i++)	{       		    
 				anArray[count][i] = decimalPlaces.format(a[i-1]);  //decimalPlaces SETS THE DECIMAL PLACES. USES DECIMALFORMAT CLASS 			   
-																	   
 			}
 			count++;
 	}
