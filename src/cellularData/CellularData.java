@@ -30,11 +30,9 @@ public class CellularData {
 //*****************************************************************************************	
 	public double getNumSubscriptionsInCountryForPeriod(String country, int startYear, int endYear)	{  		//INCOMPLETE METHOD
 		double temp = 0.00;
-		int index = 0;
-//		System.out.println("This finds the country and stats in the array!!!!!");
+
 		for(int i = 1; i <= anArray.length - 1; i++)	{
 			if (anArray[i][0].contains(country))	{				//REMEMBER <>.contains(<>) although not sure this is correct but it works.
-//				System.out.print(country + "\t\t");										
 				for(int j = 1; j <= anArray[i].length-1; j++)	{
 //					System.out.print(anArray[i][j] + "\t\t");
 					temp = temp + (Double.parseDouble(anArray[i][j]));
@@ -46,14 +44,8 @@ public class CellularData {
         	int b = Integer.parseInt(anArray[0][i]);          //string parsed to integer
        		if (b == startYear)    {
             	System.out.println("\nThe index of " + b + " is " + i + "\n");
-            	index = i;
-            	break;
-        	}
+	       	}
 		} 
-		
-
-
-
 
 //		for(int i = startYear; i <= endYear; i++)	{  // this prints out the year string
 //			System.out.print(i + "\t");
