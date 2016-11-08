@@ -39,11 +39,12 @@ public class CellularData {
 			}
 		}
 		
-		for (int i = 1; i < anArray[0].length - 1; i++)    {  //there is an object -type problem here!!!!!ARRAYS ARE NOW STRINGS.
-        	int b = Integer.parseInt(anArray[0][i]);          //string parsed to integer
+		for (int i = 1; i < anArray[0].length - 1; i++)    {  //finds the index of a year
+        	int b = Integer.parseInt(anArray[0][i]);          
        		if (b == startYear)    {
             	System.out.println("\nThe index of " + b + " is " + i + "\n");
 	       	}
+       		else System.out.println(startYear + " is not in the array");
 		} 
 		System.out.println();  //add lines between output
 		return temp;
