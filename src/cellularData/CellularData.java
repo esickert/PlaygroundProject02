@@ -34,7 +34,6 @@ public class CellularData {
 		for(int i = 1; i <= anArray.length - 1; i++)	{
 			if (anArray[i][0].contains(country))	{				//REMEMBER <>.contains(<>) although not sure this is correct but it works.
 				for(int j = 1; j <= anArray[i].length-1; j++)	{
-//					System.out.print(anArray[i][j] + "\t\t");
 					temp = temp + (Double.parseDouble(anArray[i][j]));
 				}
 			}
@@ -46,17 +45,10 @@ public class CellularData {
             	System.out.println("\nThe index of " + b + " is " + i + "\n");
 	       	}
 		} 
-
-//		for(int i = startYear; i <= endYear; i++)	{  // this prints out the year string
-//			System.out.print(i + "\t");
-//		}  
 		System.out.println();  //add lines between output
-				
-//		System.out.println(country + ": " + decimalPlaces.format(temp) + "\n");
 		return temp;
 	}
 				
-	 
 //*****************************************************************************************		
 
 	public void addCountry(String country, double[] a)	{          //THE ARRAY WILL STORE DATA AS A STRING THEN CONVERT INT STRINGS TO INTEGERS.
@@ -79,7 +71,7 @@ public class CellularData {
 		output += "\n";
 		}                                       
 		return output;
-	}
+	} //end of toString
 
 	
 	}
