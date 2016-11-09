@@ -44,7 +44,6 @@ public class CellularData {
        		if (b == startYear)    {
             	System.out.println("\nThe index of " + b + " is " + i + "\n");
 	       	}
-       		else System.out.println(startYear + " is not in the array");
 		} 
 		System.out.println();  //add lines between output
 		return temp;
