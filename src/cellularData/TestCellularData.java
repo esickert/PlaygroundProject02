@@ -80,7 +80,7 @@ public class TestCellularData
 		// Canada (1890 to 2000): -1.00 
 
 		// Part 2: Testing with all data for a country --------------------------------------------
-		System.out.println("\n\nTesting with All Data:\n");
+//		System.out.println("\n\nTesting with All Data:\n");
 		final double[] canada = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.046433382,
 				0.229211886,0.370663166,0.752880479,1.264765577,2.110674786,2.769888481,3.621301434,
 				4.648371087,6.435664704,8.840378661,11.82226558,14.04583637,17.73689555,22.72196984,
@@ -113,7 +113,7 @@ public class TestCellularData
 		datatable.addCountry("Mexico", mexico);
 		datatable.addCountry("USA", usa);
 
-		System.out.println(datatable);
+//		System.out.println(datatable);
 		// the output is:
 		/*
 		Testing with All Data:
