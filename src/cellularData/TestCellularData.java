@@ -74,12 +74,13 @@ public class TestCellularData
 		//				
 		totalSubscriptions = datatable.getNumSubscriptionsInCountryForPeriod("Canada",1890, 2000);   
 		System.out.printf("Canada (1890 to 2000): %.2f", totalSubscriptions);
+		System.out.println();                                                    //MyStuff******************************
 		// the output is:
 		// Illegal Argument Request of start year 1890. Valid period for Canada is 1890 to 2000.
 		// Canada (1890 to 2000): -1.00 
 
 		// Part 2: Testing with all data for a country --------------------------------------------
-//		System.out.println("\n\nTesting with All Data:\n");
+		System.out.println("\n\nTesting with All Data:\n");
 		final double[] canada = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.046433382,
 				0.229211886,0.370663166,0.752880479,1.264765577,2.110674786,2.769888481,3.621301434,
 				4.648371087,6.435664704,8.840378661,11.82226558,14.04583637,17.73689555,22.72196984,
@@ -112,7 +113,7 @@ public class TestCellularData
 		datatable.addCountry("Mexico", mexico);
 		datatable.addCountry("USA", usa);
 
-//		System.out.println(datatable);
+		System.out.println(datatable);
 		// the output is:
 		/*
 		Testing with All Data:
@@ -124,7 +125,8 @@ public class TestCellularData
 		// Note: As long as your output is easily readable,
 		//       then the alignment (i.e. tabs and white-space) of your output need not match mine.
 //		datatable.getNumSubscriptionsInCountryForPeriod("USA",1983,1989);  //*************************************MYSTUFF
-//  		totalSubscriptions = datatable.getNumSubscriptionsInCountryForPeriod("United States",1983,1989);          //System.out.printf("United States (1983 to 1989): %.2f \n", totalSubscriptions);
+//  		totalSubscriptions = datatable.getNumSubscriptionsInCountryForPeriod("United States",1983,1989);          
+//  		System.out.printf("United States (1983 to 1989): %.2f \n", totalSubscriptions);
 		// the output is:
 		// United States (1983 to 1989): 3.18
 
