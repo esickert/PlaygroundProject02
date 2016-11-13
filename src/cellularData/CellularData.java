@@ -25,30 +25,8 @@ public class CellularData {   //THIS IS THE GENERAL CLASS. USE SUBCLASSES TO DEF
 				anArray[0][i] = Integer.toString(startingYear);        //CONVERTING THE INTEGER YEARS TO STRINGS.
 				startingYear++;		 								   //ARRAY SIZE IS BASED ON NUMBER OF COLUMNS.
 			}
-	} 
-	
-//*****************************************************************************************	
-	public double getNumSubscriptionsInCountryForPeriod(String country, int startYear, int endYear)	{  		//INCOMPLETE METHOD
-		double temp = 0.00;
-
-		for(int i = 1; i <= anArray.length - 1; i++)	{
-			if (anArray[i][0].contains(country))	{				//REMEMBER <>.contains(<>) although not sure this is correct but it works.
-				for(int j = 1; j <= anArray[i].length-1; j++)	{
-					temp = temp + (Double.parseDouble(anArray[i][j]));
-				}
-			}
-		}
-		
-		for (int i = 1; i < anArray[0].length - 1; i++)    {  //finds the index of a year
-        	int b = Integer.parseInt(anArray[0][i]);          
-       		if (b == startYear)    {
-            	System.out.println("\nThe index of " + b + " is " + i + "\n");
-	       	}
-		} 
-		System.out.println();  //add lines between output
-		return temp;
 	}
-				
+	
 //*****************************************************************************************		
 
 	public void addCountry(String country, double[] a)	{          //THE ARRAY WILL STORE DATA AS A STRING THEN CONVERT INT STRINGS TO INTEGERS.
@@ -58,7 +36,29 @@ public class CellularData {   //THIS IS THE GENERAL CLASS. USE SUBCLASSES TO DEF
 				anArray[count][i] = decimalPlaces.format(a[i-1]);  //decimalPlaces SETS THE DECIMAL PLACES. USES DECIMALFORMAT CLASS 			   
 			}
 			count++;
+	} 
+	
+//*****************************************************************************************	
+	public double getNumSubscriptionsInCountryForPeriod(String country, int startYear, int endYear)	{  		//INCOMPLETE METHOD
+		double temp = 0.00;
+
+		for(int i = 1; i <= anArray.length - 1; i++)	{
+			if (anArray[i][0].contains(country))					//REMEMBER <>.contains(<>) although not sure this is correct but it works.
+				for(int j = 1; j <= anArray[i].length-1; j++)	{
+					temp = temp + (Double.parseDouble(anArray[i][j]));
+				}
+		}
+		
+		for (int i = 1; i < anArray[0].length - 1; i++)    {                                     //FINDS THE INDEX OF A YEAR
+        	int b = Integer.parseInt(anArray[0][i]);          
+       		if (b == startYear)    {
+            	System.out.println("\nThe index of " + b + " is " + i + "\n");
+	       	}
+		} 
+		System.out.println();  //add lines between output
+		return temp;
 	}
+				
 	
 //*****************************************************************************************************	  
 	@Override   //using this as a safety check that i didn't misspell anything
