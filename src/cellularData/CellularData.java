@@ -49,14 +49,17 @@ public class CellularData {   //THIS IS THE GENERAL CLASS. USE SUBCLASSES TO DEF
 				}
 		}
 		
-		for (int i = 1; i < anArray[0].length - 1; i++)    {                                     //FINDS THE INDEX OF A YEAR
+		System.out.println();  //add lines between output
+		return temp;
+		
+/*		for (int i = 1; i < anArray[0].length - 1; i++)    {                                     //FINDS THE INDEX OF A YEAR
         	int b = Integer.parseInt(anArray[0][i]);          
        		if (b == startYear)    {
             	System.out.println("\nThe index of " + b + " is " + i + "\n");
 	       	}
-		} 
-		System.out.println();  //add lines between output
-		return temp;
+		}   */
+//		System.out.println();  //add lines between output
+//		return temp; 
 	}
 				
 	
