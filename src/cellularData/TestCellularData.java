@@ -50,6 +50,7 @@ public class TestCellularData
 		//       then the alignment (i.e. tabs and white-space) of your output need not match mine.
 
 //**************************************************************************************************************************
+		System.out.println("This adds ALL the data for that country.");  //**************************************MYSTUFF
 		// TODO: Get the total number of cellular subscriptions for a given country and time period.
 		double totalSubscriptions = datatable.getNumSubscriptionsInCountryForPeriod("USA",1986,1989);
 		System.out.printf("USA (1984 to 1989): %.2f", totalSubscriptions);
