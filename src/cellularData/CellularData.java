@@ -41,22 +41,35 @@ public class CellularData {   //THIS IS THE GENERAL CLASS. USE SUBCLASSES TO DEF
 //*****************************************************************************************	
 	public double getNumSubscriptionsInCountryForPeriod(String country, int startYear, int endYear)	{  		//INCOMPLETE METHOD
 		double temp = 0.00;
-		int index = 0;
+		int startYearIndex = 0;
+		int endYearIndex = 0;
 
-		for(int i = 1; i <= anArray.length - 1; i++)	{   //REMEMBER <>.contains(<>) although not sure this is correct but it works.
-			if (anArray[i][0].contains(country))						//finds the row with the country entry.
-				for(int j = 1; j <= anArray[i].length-1; j++)	{		//adds the total of all data entries for that country.
-					temp = temp + (Double.parseDouble(anArray[i][j]));
-				}
+		for(int i = 0; i <= anArray.length - 1; i++)	{   //REMEMBER <>.contains(<>) although not sure this is correct but it works.
+			if (anArray[i][0].contains(country)) {
+				
+			for (int j = 1; j < anArray[0].length - 1; j++)    {                                     //FINDS THE INDEX OF A YEAR
+        			int b = Integer.parseInt(anArray[0][j]);          
+       				if (b == startYear)    
+            			startYearIndex = j;
+            	}
+            	
+/*            	for (int j = 1; j < anArray[0].length - 1; j++)    {                                     //FINDS THE INDEX OF A YEAR
+        			int c = Integer.parseInt(anArray[0][j]);          
+       				if (c == endYear)    
+            			endYearIndex = j;
+            	} */
+            	
+            	System.out.println("\nThe index for " + startYear + " is " + startYearIndex);
+//				System.out.println("\nThe index for " + endYear + " is " + endYearIndex); 
+			    for (int k = startYearIndex; k <= 7; k++)    {  //adds up the data.
+            		temp = temp + Double.parseDouble(anArray[i][k]);
+			    } 
 		}
+	
 		
-/*		for (int i = 1; i < anArray[0].length - 1; i++)    {                                     //FINDS THE INDEX OF A YEAR
-        	int b = Integer.parseInt(anArray[0][i]);          
-       		if (b == startYear)    {
-            	System.out.println("\nThe index of " + b + " is " + i + "\n");
-	       	}
-		}   */
-		System.out.println();  //add lines between output
+        }
+		  
+		System.out.println("\n" + country + " for " + startYear + " to " + endYear + " subscriptions: " + temp );  //add lines between output
 		return temp; 
 	}
 				
