@@ -114,7 +114,7 @@ public class TestCellularData
 		datatable.addCountry("Mexico", mexico);
 		datatable.addCountry("USA", usa);
 
-//		System.out.println(datatable);
+		System.out.println(datatable);
 		// the output is:
 		/*
 		Testing with All Data:
