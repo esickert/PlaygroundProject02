@@ -42,13 +42,13 @@ public class CellularData {   //THIS IS THE GENERAL CLASS. USE SUBCLASSES TO DEF
 	public double getNumSubscriptionsInCountryForPeriod(String country, int startYear, int endYear)	{  		//INCOMPLETE METHOD
 		double temp = 0.00;
 		int startYearIndex = 0;
-		int endYearIndex = 0;
+//		int endYearIndex = 0;
 
 		for(int i = 0; i <= anArray.length - 1; i++)	{   //REMEMBER <>.contains(<>) although not sure this is correct but it works.
 			if (anArray[i][0].contains(country)) {
 				
-			for (int j = 1; j < anArray[0].length - 1; j++)    {                                     //FINDS THE INDEX OF A YEAR
-        			int b = Integer.parseInt(anArray[0][j]);          
+			for (int j = 1; j < anArray[0].length - 1; j++)    {                                     //FINDS THE INDEX OF A STARTYEAR
+        			int b = Integer.parseInt(anArray[0][j]);          								 //OKAY THIS WORKS!!!!!
        				if (b == startYear)    
             			startYearIndex = j;
             	}
@@ -59,7 +59,7 @@ public class CellularData {   //THIS IS THE GENERAL CLASS. USE SUBCLASSES TO DEF
             			endYearIndex = j;
             	} */
             	
-            	System.out.println("\nThe index for " + startYear + " is " + startYearIndex);
+//            	System.out.println("\nThe index for " + startYear + " is " + startYearIndex);
 //				System.out.println("\nThe index for " + endYear + " is " + endYearIndex); 
 			    for (int k = startYearIndex; k <= 7; k++)    {  //adds up the data.
             		temp = temp + Double.parseDouble(anArray[i][k]);
@@ -69,7 +69,8 @@ public class CellularData {   //THIS IS THE GENERAL CLASS. USE SUBCLASSES TO DEF
 		
         }
 		  
-		System.out.println("\n" + country + " for " + startYear + " to " + endYear + " subscriptions: " + temp );  //add lines between output
+//		System.out.println("\n" + country + " for " + startYear + " to " + endYear + " subscriptions: " + temp );  //add lines between output
+		System.out.println();
 		return temp; 
 	}
 				

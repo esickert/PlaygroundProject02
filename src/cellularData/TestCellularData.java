@@ -58,8 +58,8 @@ public class TestCellularData
 		// the output is: 
 		// United States (1983 to 1989): 3.18 
 
-		totalSubscriptions = datatable.getNumSubscriptionsInCountryForPeriod("Mexico",1987,1989);
-		System.out.printf("Mexico (1987 to 1989): %.2f", totalSubscriptions);
+		totalSubscriptions = datatable.getNumSubscriptionsInCountryForPeriod("Mexico",1984,1989);
+		System.out.printf("Mexico (1984 to 1989): %.2f", totalSubscriptions);
 		// country is "mexico", subscriptions from 1983 to 1989
 		// the output is:
 		// Mexico (1983 to 1989): 0.01 
@@ -73,8 +73,8 @@ public class TestCellularData
 		//		 option 2 (recommended): Display a message and return the 
 		//				   total number of subscriptions for the valid sub-period.
 		//				
-		totalSubscriptions = datatable.getNumSubscriptionsInCountryForPeriod("Canada",1987, 2000);   
-		System.out.printf("Canada (1990 to 2000): %.2f", totalSubscriptions);
+		totalSubscriptions = datatable.getNumSubscriptionsInCountryForPeriod("Canada",1985, 1989);   
+		System.out.printf("Canada (1985 to 1989): %.2f", totalSubscriptions);
 		System.out.println();                                                    //MyStuff******************************
 		// the output is:
 		// Illegal Argument Request of start year 1890. Valid period for Canada is 1890 to 2000.
