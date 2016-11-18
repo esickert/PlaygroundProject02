@@ -50,13 +50,12 @@ public class TestCellularData
 		//       then the alignment (i.e. tabs and white-space) of your output need not match mine.
 
 //**************************************************************************************************************************
-		System.out.println("This adds ALL the data for that country.");  //**************************************MYSTUFF
 		// TODO: Get the total number of cellular subscriptions for a given country and time period.
-		double totalSubscriptions = datatable.getNumSubscriptionsInCountryForPeriod("USA",1986,1989);
-		System.out.printf("USA (1986 to 1989): %.2f", totalSubscriptions);
+		double totalSubscriptions = datatable.getNumSubscriptionsInCountryForPeriod("USA",1985,1989);
+		System.out.printf("USA (1985 to 1989): %.2f", totalSubscriptions);
 		// country is "usa", subscriptions from 1983 to 1989
 		// the output is: 
-		// United States (1983 to 1989): 3.18 
+		// United States (1983 to 1988): 3.18 
 
 		totalSubscriptions = datatable.getNumSubscriptionsInCountryForPeriod("Mexico",1984,1989);
 		System.out.printf("Mexico (1984 to 1989): %.2f", totalSubscriptions);
@@ -73,8 +72,8 @@ public class TestCellularData
 		//		 option 2 (recommended): Display a message and return the 
 		//				   total number of subscriptions for the valid sub-period.
 		//				
-		totalSubscriptions = datatable.getNumSubscriptionsInCountryForPeriod("Canada",1985, 1989);   
-		System.out.printf("Canada (1985 to 1989): %.2f", totalSubscriptions);
+		totalSubscriptions = datatable.getNumSubscriptionsInCountryForPeriod("Canada",1890, 1989);   
+		System.out.printf("Canada (1890 to 1989): %.2f", totalSubscriptions);
 		System.out.println();                                                    //MyStuff******************************
 		// the output is:
 		// Illegal Argument Request of start year 1890. Valid period for Canada is 1890 to 2000.
@@ -125,21 +124,21 @@ public class TestCellularData
 		 */
 		// Note: As long as your output is easily readable,
 		//       then the alignment (i.e. tabs and white-space) of your output need not match mine.
-//		datatable.getNumSubscriptionsInCountryForPeriod("USA",1983,1989);  //*************************************MYSTUFF
-//  		totalSubscriptions = datatable.getNumSubscriptionsInCountryForPeriod("United States",1983,1989);          
-//  		System.out.printf("United States (1983 to 1989): %.2f \n", totalSubscriptions);
+		datatable.getNumSubscriptionsInCountryForPeriod("USA",1983,1989);  //*************************************MYSTUFF
+  		totalSubscriptions = datatable.getNumSubscriptionsInCountryForPeriod("USA",1983,1989);          
+  		System.out.printf("USA (1983 to 1989): %.2f \n", totalSubscriptions);
 		// the output is:
 		// United States (1983 to 1989): 3.18
 
-//		datatable.getNumSubscriptionsInCountryForPeriod("Mexico",1960,2000);
-//		totalSubscriptions = datatable.getNumSubscriptionsInCountryForPeriod("Mexico",1960,2000);
-//		System.out.printf("Mexico (1960 to 2000): %.2f \n", totalSubscriptions);
+		datatable.getNumSubscriptionsInCountryForPeriod("Mexico",1960,2000);
+		totalSubscriptions = datatable.getNumSubscriptionsInCountryForPeriod("Mexico",1960,2000);
+		System.out.printf("Mexico (1960 to 2000): %.2f \n", totalSubscriptions);
 		// the output is:
 		// Mexico (1960 to 2000): 29.62
 
 //		datatable.getNumSubscriptionsInCountryForPeriod("Canada",1890, 2000);
-//		totalSubscriptions = datatable.getNumSubscriptionsInCountryForPeriod("Canada",1890, 2000);
-//		System.out.printf("Canada (1890 to 2000): %.2f \n", totalSubscriptions);
+		totalSubscriptions = datatable.getNumSubscriptionsInCountryForPeriod("Canada",1890, 2000);
+		System.out.printf("Canada (1890 to 2000): %.2f \n", totalSubscriptions);
 		// the output is:
 		// Illegal Argument Request of start year 1890. Valid period for Canada is 1890 to 2000.
 		// Canada (1890 to 2000): -1.00 

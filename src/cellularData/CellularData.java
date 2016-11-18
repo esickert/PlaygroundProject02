@@ -20,7 +20,7 @@ public class CellularData {   //THIS IS THE GENERAL CLASS. USE SUBCLASSES TO DEF
 //****************************************************************************************************
 	
 	public void loadCountryYears()	{ 
-		anArray[0][0] = "Country/Year";							       //THE ELEMENNTS OF THE ARRAY ARE STRINGS
+		anArray[0][0] = "Year/Country";							       //THE ELEMENNTS OF THE ARRAY ARE STRINGS
 			for (int i = 1; i <= numColumns ; i++)	{       		    
 				anArray[0][i] = Integer.toString(startingYear);        //CONVERTING THE INTEGER YEARS TO STRINGS.
 				startingYear++;		 								   //ARRAY SIZE IS BASED ON NUMBER OF COLUMNS.
@@ -42,26 +42,31 @@ public class CellularData {   //THIS IS THE GENERAL CLASS. USE SUBCLASSES TO DEF
 	public double getNumSubscriptionsInCountryForPeriod(String country, int startYear, int endYear)	{  		//INCOMPLETE METHOD
 		double temp = 0.00;
 		int startYearIndex = 0;
-//		int endYearIndex = 0;
+		int endYearIndex = 0;
 
 		for(int i = 0; i <= anArray.length - 1; i++)	{   //REMEMBER <>.contains(<>) although not sure this is correct but it works.
 			if (anArray[i][0].contains(country)) {
 				
-			for (int j = 1; j < anArray[0].length - 1; j++)    {                                     //FINDS THE INDEX OF A STARTYEAR
+			for (int j = 1; j < anArray[0].length; j++)    {                                     //FINDS THE INDEX OF A STARTYEAR
         			int b = Integer.parseInt(anArray[0][j]);          								 //OKAY THIS WORKS!!!!!
        				if (b == startYear)    
-            			startYearIndex = j;
-            	}
+            			startYearIndex = j; 
+            	} 
             	
-/*            	for (int j = 1; j < anArray[0].length - 1; j++)    {                                     //FINDS THE INDEX OF A YEAR
+           	for (int j = 1; j < anArray[0].length; j++)    {                                     //FINDS THE INDEX OF A YEAR
         			int c = Integer.parseInt(anArray[0][j]);          
        				if (c == endYear)    
             			endYearIndex = j;
-            	} */
+            	} 
             	
-//            	System.out.println("\nThe index for " + startYear + " is " + startYearIndex);
-//				System.out.println("\nThe index for " + endYear + " is " + endYearIndex); 
-			    for (int k = startYearIndex; k <= 7; k++)    {  //adds up the data.
+//			System.out.println("\n\nThe index of " + startYear + " is " + startYearIndex);
+//			System.out.print("The index of " + endYear + " is " + endYearIndex);
+			if ((startYearIndex == 0)||(endYearIndex == 0))	{
+				temp = -1;
+				System.out.print("\nYear inputs invalid for data table.");
+			}
+			else
+			   	for (int k = startYearIndex; k <= endYearIndex; k++)    {  //adds up the data.
             		temp = temp + Double.parseDouble(anArray[i][k]);
 			    } 
 		}
@@ -78,7 +83,7 @@ public class CellularData {   //THIS IS THE GENERAL CLASS. USE SUBCLASSES TO DEF
 //*****************************************************************************************************	  
 	@Override   //using this as a safety check that i didn't misspell anything
 	public String toString()	{ //this works to override java.lang.Object.toString
-		String output = "\n ";
+		String output = "\n";
 		for(int i = 0; i <= anArray.length - 1; i++)	{
 			for(int j = 0; j <= anArray[i].length - 1; j++)	{  //ROWS
 				output += (anArray[i][j] + "\t\t");						//added another tab here
