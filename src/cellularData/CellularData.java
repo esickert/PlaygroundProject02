@@ -91,7 +91,7 @@ public class CellularData {   //THIS IS THE GENERAL CLASS. USE SUBCLASSES TO DEF
 	
 				
 	
-//*****************************************************************************************************	  
+//*****************************************************************************************************	
 	@Override   //using this as a safety check that i didn't misspell anything
 	public String toString()	{ //this works to override java.lang.Object.toString
 		String output = "\n";
