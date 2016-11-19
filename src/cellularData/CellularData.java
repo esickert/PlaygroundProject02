@@ -47,37 +47,48 @@ public class CellularData {   //THIS IS THE GENERAL CLASS. USE SUBCLASSES TO DEF
 		for(int i = 0; i <= anArray.length - 1; i++)	{   //REMEMBER <>.contains(<>) although not sure this is correct but it works.
 			if (anArray[i][0].contains(country)) {
 				
-			for (int j = 1; j < anArray[0].length; j++)    {                                     //FINDS THE INDEX OF A STARTYEAR
-        			int b = Integer.parseInt(anArray[0][j]);          								 //OKAY THIS WORKS!!!!!
-       				if (b == startYear)    
-            			startYearIndex = j; 
-            	} 
+				for (int j = 1; j < anArray[0].length; j++)    {                                     //FINDS THE INDEX OF A STARTYEAR
+        				int b = Integer.parseInt(anArray[0][j]);          								 //OKAY THIS WORKS!!!!!
+       					if (b == startYear)    
+            				startYearIndex = j; 
+            	} //end of for loop 
             	
-           	for (int j = 1; j < anArray[0].length; j++)    {                                     //FINDS THE INDEX OF A YEAR
-        			int c = Integer.parseInt(anArray[0][j]);          
-       				if (c == endYear)    
-            			endYearIndex = j;
-            	} 
+           		for (int j = 1; j < anArray[0].length; j++)    {                                     //FINDS THE INDEX OF A YEAR
+        				int c = Integer.parseInt(anArray[0][j]);          
+       					if (c == endYear)    
+            					endYearIndex = j;
+            	} //end of for loop 
             	
-//			System.out.println("\n\nThe index of " + startYear + " is " + startYearIndex);
-//			System.out.print("The index of " + endYear + " is " + endYearIndex);
-			if ((startYearIndex == 0)||(endYearIndex == 0))	{
-				temp = -1;
-				System.out.print("\nYear inputs invalid for data table.");
-			}
-			else
-			   	for (int k = startYearIndex; k <= endYearIndex; k++)    {  //adds up the data.
+		System.out.println("\n\nThe index of " + startYear + " is " + startYearIndex);
+		System.out.println("The index of " + endYear + " is " + endYearIndex);
+
+
+	//THIS IS NOT ERRORING OUT AS EXPECTED.			
+				if ((startYearIndex == 0) && (endYearIndex == 0)) {
+				    System.out.print("Illegal Arguments Request of start year " + startYear + " and end year " + endYear);
+				    temp = -1;
+				} //end of else statement
+				
+				
+				else if ((startYearIndex == 0))	{
+					System.out.print("Illegal Argument Request of start year: " + startYear);
+					temp = -1;
+				} //end of if statement
+				else if (endYearIndex == 0)	{
+					System.out.print("Illegal Argument Request of end year: " + endYear);
+					temp = -1;
+				} //end of else statement
+				else	{	
+			   		for (int k = startYearIndex; k <= endYearIndex; k++)    
             		temp = temp + Double.parseDouble(anArray[i][k]);
-			    } 
-		}
-	
-		
-        }
+            	} //end of else statement
+			} // end of if statement	
 		  
-//		System.out.println("\n" + country + " for " + startYear + " to " + endYear + " subscriptions: " + temp );  //add lines between output
-		System.out.println();
-		return temp; 
-	}
+			}//end of for loop
+		return temp;
+	} //for loop
+	
+	
 				
 	
 //*****************************************************************************************************	  
