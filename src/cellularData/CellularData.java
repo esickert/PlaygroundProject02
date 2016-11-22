@@ -8,8 +8,8 @@ public class CellularData {   //THIS IS THE GENERAL CLASS. USE SUBCLASSES TO DEF
 	private int numColumns;
 	private int startingYear;
 	private int count = 1; //????????????????
-	int firstYear;
-	int lastYear;
+	private int firstYear;
+	private int lastYear;
 	private String[][] anArray;   //CHANGED THE ARRAY FROM OBJECT TO STRING. CONVERT THE INTEGERS FROM STRING TO INT.
 	
 	public CellularData(int numRows, int numColumns, int startingYear)	{  //REMEMBER PARAMETERS NEED TYPE...THIS IS A CONSTRUCTOR!!!!!!!!!!!!
@@ -21,14 +21,14 @@ public class CellularData {   //THIS IS THE GENERAL CLASS. USE SUBCLASSES TO DEF
 //****************************************************************************************************
 	
 	public void loadCountryYears()	{
-		System.out.println("This is the start year " + startingYear);
+//		System.out.println("This is the start year " + startingYear);
 		firstYear = startingYear;
 		anArray[0][0] = "Year/Country";							       //THE ELEMENNTS OF THE ARRAY ARE STRINGS
 			for (int i = 1; i <= numColumns ; i++)	{       		    
 				anArray[0][i] = Integer.toString(startingYear);        //CONVERTING THE INTEGER YEARS TO STRINGS.
 				startingYear++;		 								   //ARRAY SIZE IS BASED ON NUMBER OF COLUMNS.
 			}
-		System.out.println("This is the end year " + (startingYear - 1)); //NEED TO DECREMENT BY 1 BECAUSE STARTINGYEAR
+//		System.out.println("This is the end year " + (startingYear - 1)); //NEED TO DECREMENT BY 1 BECAUSE STARTINGYEAR
 		lastYear =  (startingYear - 1);
 	}
 	
