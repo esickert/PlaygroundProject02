@@ -12,7 +12,7 @@ public class TestCellularData
 	public static void main(String[] args) 
 	{
 		// Part 1: Testing with partial data for a country --------------------
-		System.out.println("Testing with Partial Data:\n");
+		System.out.println("Testing with Partial Data:");
 		final double[] canadaPartial = {0,0,0.046433382,0.229211886,0.370663166,0.752880479,1.264765577};
 		final double[] mexicoPartial = {0,0,0,0,0,0.001815204,0.010079818};
 		final double[] usaPartial = {0,0.038253436,0.140659444,0.279060364,0.498659917,0.829863407,1.39281703};
@@ -80,7 +80,7 @@ public class TestCellularData
 		// Canada (1890 to 2000): -1.00 
 
 		// Part 2: Testing with all data for a country --------------------------------------------
-//		System.out.println("\n\nTesting with All Data:\n");
+		System.out.println("\n\nTesting with All Data:");
 		final double[] canada = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.046433382,
 				0.229211886,0.370663166,0.752880479,1.264765577,2.110674786,2.769888481,3.621301434,
 				4.648371087,6.435664704,8.840378661,11.82226558,14.04583637,17.73689555,22.72196984,
@@ -115,8 +115,8 @@ public class TestCellularData
 
 		System.out.println(datatable);
 		// the output is:
-		/*
-		Testing with All Data:
+		
+		/*Testing with All Data:
         Country,Year      1960      1961      1962      1963      1964      1965      1966      1967      1968      1969      1970      1971      1972      1973      1974      1975      1976      1977      1978      1979      1980      1981      1982      1983      1984      1985      1986      1987      1988      1989      1990      1991      1992      1993      1994      1995      1996      1997      1998      1999      2000      2001      2002      2003      2004      2005      2006      2007      2008      2009      2010      2011      2012      2013      2014    
               Canada         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0      0.05      0.23      0.37      0.75      1.26      2.11      2.77      3.62      4.65      6.44      8.84     11.82     14.05     17.74     22.72     28.43     34.37     37.95     42.07     47.06     52.76     57.49     61.47     66.20     70.55     75.68     77.83     79.57     80.61     81.04    
               Mexico         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0      0.00      0.01      0.07      0.18      0.35      0.42      0.61      0.72      1.05      1.76      3.33      7.56     13.55     20.65     24.29     27.85     35.15     42.56     49.41     58.63     65.50     71.46     77.52     79.24     83.35     87.26     82.22    

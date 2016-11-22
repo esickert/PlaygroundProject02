@@ -8,7 +8,6 @@ public class CellularData {   //THIS IS THE GENERAL CLASS. USE SUBCLASSES TO DEF
 	int numColumns;
 	int startingYear;
 	int count = 1;
-	
 	String[][] anArray;   //CHANGED THE ARRAY FROM OBJECT TO STRING. CONVERT THE INTEGERS FROM STRING TO INT.
 	
 	public CellularData(int numRows, int numColumns, int startingYear)	{  //REMEMBER PARAMETERS NEED TYPE...THIS IS A CONSTRUCTOR!!!!!!!!!!!!
@@ -19,12 +18,14 @@ public class CellularData {   //THIS IS THE GENERAL CLASS. USE SUBCLASSES TO DEF
 	}
 //****************************************************************************************************
 	
-	public void loadCountryYears()	{ 
+	public void loadCountryYears()	{
+		System.out.println("This is the start year " + startingYear); 
 		anArray[0][0] = "Year/Country";							       //THE ELEMENNTS OF THE ARRAY ARE STRINGS
 			for (int i = 1; i <= numColumns ; i++)	{       		    
 				anArray[0][i] = Integer.toString(startingYear);        //CONVERTING THE INTEGER YEARS TO STRINGS.
 				startingYear++;		 								   //ARRAY SIZE IS BASED ON NUMBER OF COLUMNS.
 			}
+		System.out.println("This is the end year " + (startingYear - 1)); //NEED TO DECREMENT BY 1 BECAUSE STARTINGYEAR 
 	}
 	
 //*****************************************************************************************		
@@ -39,11 +40,12 @@ public class CellularData {   //THIS IS THE GENERAL CLASS. USE SUBCLASSES TO DEF
 	} 
 	
 //*****************************************************************************************	
-	public double getNumSubscriptionsInCountryForPeriod(String country, int startYear, int endYear)	{  		//INCOMPLETE METHOD
+	public double getNumSubscriptionsInCountryForPeriod(String country, int startYear, int endYear)	{ 
+		 		//INCOMPLETE METHOD
 		double temp = 0.00;
 		int startYearIndex = 0;
 		int endYearIndex = 0;
-
+	
 		for(int i = 0; i <= anArray.length - 1; i++)	{   //REMEMBER <>.contains(<>) although not sure this is correct but it works.
 			if (anArray[i][0].contains(country)) {
 				
@@ -59,23 +61,24 @@ public class CellularData {   //THIS IS THE GENERAL CLASS. USE SUBCLASSES TO DEF
             					endYearIndex = j;
             	} //end of for loop 
             	
-		System.out.println("\n\nThe index of " + startYear + " is " + startYearIndex);
-		System.out.println("The index of " + endYear + " is " + endYearIndex);
+//		System.out.println("\n\nThe index of " + startYear + " is " + startYearIndex);
+//		System.out.println("The index of " + endYear + " is " + endYearIndex);
+
+
+
 
 
 	//THIS IS NOT ERRORING OUT AS EXPECTED.			
 				if ((startYearIndex == 0) && (endYearIndex == 0)) {
-				    System.out.print("Illegal Arguments Request of start year " + startYear + " and end year " + endYear);
+				    System.out.print("Illegal Arguments Request of start year " + startYear + " and end year " + endYear + " for " + country);
 				    temp = -1;
 				} //end of else statement
-				
-				
 				else if ((startYearIndex == 0))	{
-					System.out.print("Illegal Argument Request of start year: " + startYear);
+					System.out.print("Illegal Argument Request of start year for " + country + ": " + startYear);
 					temp = -1;
 				} //end of if statement
 				else if (endYearIndex == 0)	{
-					System.out.print("Illegal Argument Request of end year: " + endYear);
+					System.out.print("Illegal Argument Request of end year for " + country + ": " + endYear);
 					temp = -1;
 				} //end of else statement
 				else	{	
