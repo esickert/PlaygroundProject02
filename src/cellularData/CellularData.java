@@ -4,14 +4,14 @@ import java.text.DecimalFormat;  //CLASS TO SET THE DECIMAL OUTPUT TO SPECIFIC D
 
 public class CellularData {   //THIS IS THE GENERAL CLASS. USE SUBCLASSES TO DEFINE SPECIALIZED CLASSES THAT ADD TO OR REVISE THE GENERAL CLASS.
 	private static DecimalFormat decimalPlaces = new DecimalFormat("##.##");  //THIS SETS THE NUMBER OF PLACES TO THE RIGHT OF THE DECIMAL POINT.
-	int numRows;    
-	int numColumns;
-	int startingYear;
-	int count = 1;
-	String[][] anArray;   //CHANGED THE ARRAY FROM OBJECT TO STRING. CONVERT THE INTEGERS FROM STRING TO INT.
+//	private int numRows;  //????????????????????????  
+	private int numColumns;
+	private int startingYear;
+	private int count = 1; //????????????????
+	private String[][] anArray;   //CHANGED THE ARRAY FROM OBJECT TO STRING. CONVERT THE INTEGERS FROM STRING TO INT.
 	
 	public CellularData(int numRows, int numColumns, int startingYear)	{  //REMEMBER PARAMETERS NEED TYPE...THIS IS A CONSTRUCTOR!!!!!!!!!!!!
-		this.numRows = numRows;
+//		this.numRows = numRows;
 		this.numColumns = numColumns;  								  
 		this.startingYear = startingYear;							
 		this.anArray = new String[numRows][numColumns + 1];  			  
