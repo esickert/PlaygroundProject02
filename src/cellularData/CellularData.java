@@ -64,10 +64,6 @@ public class CellularData {   //THIS IS THE GENERAL CLASS. USE SUBCLASSES TO DEF
 //		System.out.println("\n\nThe index of " + startYear + " is " + startYearIndex);
 //		System.out.println("The index of " + endYear + " is " + endYearIndex);
 
-
-
-
-
 	//THIS IS NOT ERRORING OUT AS EXPECTED.			
 				if ((startYearIndex == 0) && (endYearIndex == 0)) {
 				    System.out.print("Illegal Arguments Request of start year " + startYear + " and end year " + endYear + " for " + country);
@@ -91,9 +87,6 @@ public class CellularData {   //THIS IS THE GENERAL CLASS. USE SUBCLASSES TO DEF
 		return temp;
 	} //for loop
 	
-	
-				
-	
 //*****************************************************************************************************	
 	@Override   //using this as a safety check that i didn't misspell anything
 	public String toString()	{ //this works to override java.lang.Object.toString
@@ -106,9 +99,7 @@ public class CellularData {   //THIS IS THE GENERAL CLASS. USE SUBCLASSES TO DEF
 		}                                       
 		return output;
 	} //end of toString
-
-	
-	}
+}
 
 
 
