@@ -8,6 +8,8 @@ public class CellularData {   //THIS IS THE GENERAL CLASS. USE SUBCLASSES TO DEF
 	private int numColumns;
 	private int startingYear;
 	private int count = 1; //????????????????
+	int firstYear;
+	int lastYear;
 	private String[][] anArray;   //CHANGED THE ARRAY FROM OBJECT TO STRING. CONVERT THE INTEGERS FROM STRING TO INT.
 	
 	public CellularData(int numRows, int numColumns, int startingYear)	{  //REMEMBER PARAMETERS NEED TYPE...THIS IS A CONSTRUCTOR!!!!!!!!!!!!
@@ -19,13 +21,15 @@ public class CellularData {   //THIS IS THE GENERAL CLASS. USE SUBCLASSES TO DEF
 //****************************************************************************************************
 	
 	public void loadCountryYears()	{
-		System.out.println("This is the start year " + startingYear); 
+		System.out.println("This is the start year " + startingYear);
+		firstYear = startingYear;
 		anArray[0][0] = "Year/Country";							       //THE ELEMENNTS OF THE ARRAY ARE STRINGS
 			for (int i = 1; i <= numColumns ; i++)	{       		    
 				anArray[0][i] = Integer.toString(startingYear);        //CONVERTING THE INTEGER YEARS TO STRINGS.
 				startingYear++;		 								   //ARRAY SIZE IS BASED ON NUMBER OF COLUMNS.
 			}
-		System.out.println("This is the end year " + (startingYear - 1)); //NEED TO DECREMENT BY 1 BECAUSE STARTINGYEAR 
+		System.out.println("This is the end year " + (startingYear - 1)); //NEED TO DECREMENT BY 1 BECAUSE STARTINGYEAR
+		lastYear =  (startingYear - 1);
 	}
 	
 //*****************************************************************************************		
@@ -66,15 +70,18 @@ public class CellularData {   //THIS IS THE GENERAL CLASS. USE SUBCLASSES TO DEF
 
 	//THIS IS NOT ERRORING OUT AS EXPECTED.			
 				if ((startYearIndex == 0) && (endYearIndex == 0)) {
-				    System.out.print("Illegal Arguments Request of start year " + startYear + " and end year " + endYear + " for " + country);
+				    System.out.println("Invalid Arguments Request of start year " + startYear + " and end year " + endYear + " for " + country);
+				    System.out.println("Valid range " + firstYear + " to " + lastYear);
 				    temp = -1;
 				} //end of else statement
 				else if ((startYearIndex == 0))	{
-					System.out.print("Illegal Argument Request of start year for " + country + ": " + startYear);
+					System.out.println("Invalid Argument Request of start year for " + country + ": " + startYear);
+					System.out.println("Valid request for start year is " + firstYear);
 					temp = -1;
 				} //end of if statement
 				else if (endYearIndex == 0)	{
-					System.out.print("Illegal Argument Request of end year for " + country + ": " + endYear);
+					System.out.println("Invalid Argument Request of end year for " + country + ": " + endYear);
+					System.out.print ("Valid request for end year is " + lastYear);
 					temp = -1;
 				} //end of else statement
 				else	{	
