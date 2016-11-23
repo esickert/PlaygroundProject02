@@ -73,6 +73,8 @@ public class CellularData {   //THIS IS THE GENERAL CLASS. USE SUBCLASSES TO DEF
 				    System.out.println("Invalid Arguments Request of start year " + startYear + " and end year " + endYear + " for " + country);
 				    System.out.println("Valid range " + firstYear + " to " + lastYear);
 				    temp = -1;
+//				    for (int k = firstYear; k <= endYearIndex; k++)    
+//            		temp = temp + Double.parseDouble(anArray[i][k]);
 				} //end of else statement
 				else if ((startYearIndex == 0))	{
 					System.out.println("Invalid Argument Request of start year for " + country + ": " + startYear);
