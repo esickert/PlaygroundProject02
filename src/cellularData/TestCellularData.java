@@ -58,7 +58,7 @@ public class TestCellularData
 		// United States (1983 to 1988): 3.18 
 
 //		totalSubscriptions = datatable.getNumSubscriptionsInCountryForPeriod("Mexico",1984,4320);
-		System.out.printf("\nMexico (1994 to 4320): %.2f\n\n", datatable.getNumSubscriptionsInCountryForPeriod("Mexico",1984,4320));
+		System.out.printf("\nMexico (1984 to 4320): %.2f\n\n", datatable.getNumSubscriptionsInCountryForPeriod("Mexico",1984,4320));
 		// country is "mexico", subscriptions from 1983 to 1989
 		// the output is:
 		// Mexico (1983 to 1989): 0.01 
