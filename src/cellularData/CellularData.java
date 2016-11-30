@@ -4,7 +4,8 @@ import java.text.DecimalFormat;  //CLASS TO SET THE DECIMAL OUTPUT TO SPECIFIC D
 
 public class CellularData {   //THIS IS THE GENERAL CLASS. USE SUBCLASSES TO DEFINE SPECIALIZED CLASSES THAT ADD TO OR REVISE THE GENERAL CLASS.
 	private static DecimalFormat decimalPlaces = new DecimalFormat("##.##");  //THIS SETS THE NUMBER OF PLACES TO THE RIGHT OF THE DECIMAL POINT.
-//	private int numRows;  //????????????????????????  
+	private int numRows;  //????????????????????????  
+	
 	private int numColumns;
 	private int startingYear;
 	private int count = 1; //????????????????
@@ -13,7 +14,7 @@ public class CellularData {   //THIS IS THE GENERAL CLASS. USE SUBCLASSES TO DEF
 	private String[][] anArray;   //CHANGED THE ARRAY FROM OBJECT TO STRING. CONVERT THE INTEGERS FROM STRING TO INT.
 	
 	public CellularData(int numRows, int numColumns, int startingYear)	{  //REMEMBER PARAMETERS NEED TYPE...THIS IS A CONSTRUCTOR!!!!!!!!!!!!
-//		this.numRows = numRows;
+		this.numRows = numRows;
 		this.numColumns = numColumns;  								  
 		this.startingYear = startingYear;							
 		this.anArray = new String[numRows][numColumns + 1];  			  
@@ -21,6 +22,7 @@ public class CellularData {   //THIS IS THE GENERAL CLASS. USE SUBCLASSES TO DEF
 //****************************************************************************************************
 	
 	public void loadCountryYears()	{
+		System.out.println("The number of rows is : " + numRows);  //PROBLEM HERE IN WHICH NUMROWS NOT USED EXCEPT HERE.
 //		System.out.println("This is the start year " + startingYear);
 		firstYear = startingYear;
 		anArray[0][0] = "Year/Country";							       //THE ELEMENNTS OF THE ARRAY ARE STRINGS
