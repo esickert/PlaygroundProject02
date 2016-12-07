@@ -1,5 +1,7 @@
 package cellularData;
 
+import org.junit.*;
+
 /**
  *  Tests the CellularData class by reading in one dimensional arrays of countries.
  *  Given a country name and a range of years, computes the total number of subscriptions
@@ -105,10 +107,10 @@ public class TestCellularData
 		// NOTE: Your program should be able to handle a variety of ranges of years (i.e. start year to end year). 
 		//        So, do *not* assume that the data will always start from 1960 or end in on a particular year.
 		startingYear = 1960;
-
+	
 		numRows = 3 + 1;
 		numColumns = canada.length;
-
+		
 		datatable = new CellularData(numRows, numColumns, startingYear);  //HAVE TO REINITIALIZE THE DATATABLE
 		datatable.loadCountryYears(); //*********************************************MYSTUFF***SHE ONLY GIVES 3 ROWS PER 2D ARRAY
 		datatable.addCountry("Canada", canada);
