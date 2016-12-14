@@ -26,7 +26,6 @@ public class TestCellularData
 		int numRows = 3 + 1;                                    //NOTE ADDED 1 HERE FOR TESTING- mystuff
 		int numColumns = canadaPartial.length;
 
-
 		// TODO: Create a CellularData object with the given number of rows, 
 		// 		 columns, and starting year.
 		datatable = new CellularData(numRows, numColumns, startingYear);
