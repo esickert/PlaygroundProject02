@@ -21,7 +21,7 @@ public class CellularData {   //THIS IS THE GENERAL CLASS. USE SUBCLASSES TO DEF
 		this.anArray = new String[numRows][numColumns + 1];  			  
 	}
 //****************************************************************************************************
-
+	
 	public void loadCountryYears()	{
 		System.out.println("The number of rows is : " + numRows);  //PROBLEM HERE IN WHICH NUMROWS NOT USED EXCEPT HERE.
 //		System.out.println("This is the start year " + startingYear);
