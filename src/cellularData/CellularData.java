@@ -9,7 +9,7 @@ public class CellularData {   //THIS IS THE GENERAL CLASS. USE SUBCLASSES TO DEF
 	
 	private int numColumns;
 	private int startingYear;
-	private int count = 1; //???????????????? HOW IS THIS BEING USED????????
+	private int countryIndex = 1; //???????????????? HOW IS THIS BEING USED? See method addCountry
 	private int firstYear;
 	private int lastYear;
 	private String[][] anArray;   //CHANGED THE ARRAY FROM OBJECT TO STRING. CONVERT THE STRINGS TO INTEGERS
@@ -39,11 +39,11 @@ public class CellularData {   //THIS IS THE GENERAL CLASS. USE SUBCLASSES TO DEF
 
 	public void addCountry(String country, double[] a)	{          //THE ARRAY WILL STORE DATA AS A STRING THEN CONVERT INT STRINGS TO INTEGERS.
 	//BE SURE TO REINITIALIZE THE ARRAY FOR NEW DATASET!!!!!!!!!!!!!!!!!!!!!!USING "NEW ARRAY STRING[][]"	
-			anArray[count][0] = country + "\t";							   
+			anArray[countryIndex][0] = country + "\t";							   
 			for (int i = 1; i <= a.length; i++)	{       		    
-				anArray[count][i] = decimalPlaces.format(a[i-1]);  //decimalPlaces SETS THE DECIMAL PLACES. USES DECIMALFORMAT CLASS 			   
+				anArray[countryIndex][i] = decimalPlaces.format(a[i-1]);  //decimalPlaces SETS THE DECIMAL PLACES. USES DECIMALFORMAT CLASS 			   
 			}
-			count++;
+			countryIndex++;
 	} 
 	
 //*****************************************************************************************	
