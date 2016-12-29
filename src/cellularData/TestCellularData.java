@@ -11,6 +11,9 @@ import org.junit.*;
  */
 public class TestCellularData 
 {
+
+	public static final String TEST = null; //this is just testing calling a public static final constant. Has notjhing to do with the program TestCellularData.*****MYSTUFF. Class field.
+	
 	public static void main(String[] args) 
 	{
 		// Part 1: Testing with partial data for a country --------------------
