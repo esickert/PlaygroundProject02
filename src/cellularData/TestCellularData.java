@@ -12,8 +12,6 @@ import org.junit.*;
 public class TestCellularData 
 {
 
-	public static final String TEST = null; //this is just testing calling a public static final constant. Has notjhing to do with the program TestCellularData.*****MYSTUFF. Class field.
-	
 	public static void main(String[] args) 
 	{
 		// Part 1: Testing with partial data for a country --------------------
@@ -78,7 +76,7 @@ public class TestCellularData
 		//				
 		totalSubscriptions = datatable.getNumSubscriptionsInCountryForPeriod("Canada",1986, 1989);   
 		System.out.printf("Canada (1986 to 1989): %.2f\n\n", totalSubscriptions);
-		System.out.println();                                                    //MyStuff******************************
+		System.out.println();                                                    //MyStuff-output formatting issue
 		// the output is:
 		// Illegal Argument Request of start year 1890. Valid period for Canada is 1890 to 2000.
 		// Canada (1890 to 2000): -1.00 
