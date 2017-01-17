@@ -12,7 +12,7 @@ public class CellularData {   //THIS IS THE GENERAL CLASS. USE SUBCLASSES TO DEF
 	private int countryIndex = 1; //???????????????? HOW IS THIS BEING USED? See method addCountry
 	private int firstYear;
 	private int lastYear;
-	private String[][] anArray;   
+	private static String[][] anArray;   //THIS IS TESTING USING STATIC ARRAY. 
 	
 	public CellularData(int numRows, int numColumns, int startingYear)	{  //THIS IS A CONSTRUCTOR!!!!!!!!!!!!
 		this.numRows = numRows;
