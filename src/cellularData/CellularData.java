@@ -2,6 +2,7 @@ package cellularData;
 
 import java.text.DecimalFormat;  //CLASS TO SET THE DECIMAL OUTPUT TO SPECIFIC DECIMAL PLACES
 import org.junit.*;  //this is never used.
+import static org.junit.Assert.*;
 
 public class CellularData {   //THIS IS THE GENERAL CLASS. USE SUBCLASSES TO DEFINE SPECIALIZED CLASSES THAT ADD TO OR REVISE THE GENERAL CLASS.
 	private static DecimalFormat decimalPlaces = new DecimalFormat("##.##");  //THIS SETS THE NUMBER OF PLACES TO THE RIGHT OF THE DECIMAL POINT.
@@ -25,12 +26,14 @@ public class CellularData {   //THIS IS THE GENERAL CLASS. USE SUBCLASSES TO DEF
 	public void loadCountryYears()	{
 		System.out.println("The number of rows is : " + numRows);  //PROBLEM HERE IN WHICH NUMROWS NOT USED EXCEPT HERE.
 		firstYear = startingYear;
+		
 		anArray[0][0] = "Year/Country";							       
 			for (int i = 1; i <= numColumns ; i++)	{       		    
 				anArray[0][i] = Integer.toString(startingYear);        
 				startingYear++;		 								   //ARRAY SIZE IS BASED ON NUMBER OF COLUMNS.
 			}
 		lastYear =  (startingYear - 1);
+
 	}
 	
 //*****************************************************************************************		
